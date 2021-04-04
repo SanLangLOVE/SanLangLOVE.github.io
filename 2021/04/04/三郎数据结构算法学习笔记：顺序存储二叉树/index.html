@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://yoursite.com">
-  <title>三郎的博客</title>
+  <title>三郎数据结构算法学习笔记：顺序存储二叉树 | 三郎的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="@TOC 概念从数据存储来看，数组存储方式和树的存储方式可以相互转换，即数组可以转换成树，树也可以转换成数组 图示 特点顺序存储二叉树的特点:  顺序二叉树通常只考虑完全二叉树 第 n 个元素的左子节点为 2 * n + 1 第 n 个元素的右子节点为 2 * n + 2 第 n 个元素的父节点为 (n-1) &#x2F; 2n : 表示二叉树中的第几个元素(按 0 开始编号如图所示)  示例需求: 给你一">
+  <meta name="description" content="概念从数据存储来看，数组存储方式和树的存储方式可以相互转换，即数组可以转换成树，树也可以转换成数组">
 <meta property="og:type" content="article">
-<meta property="og:title" content="三郎的博客">
+<meta property="og:title" content="三郎数据结构算法学习笔记：顺序存储二叉树">
 <meta property="og:url" content="https://yoursite.com/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E4%BA%8C%E5%8F%89%E6%A0%91/index.html">
 <meta property="og:site_name" content="三郎的博客">
-<meta property="og:description" content="@TOC 概念从数据存储来看，数组存储方式和树的存储方式可以相互转换，即数组可以转换成树，树也可以转换成数组 图示 特点顺序存储二叉树的特点:  顺序二叉树通常只考虑完全二叉树 第 n 个元素的左子节点为 2 * n + 1 第 n 个元素的右子节点为 2 * n + 2 第 n 个元素的父节点为 (n-1) &#x2F; 2n : 表示二叉树中的第几个元素(按 0 开始编号如图所示)  示例需求: 给你一">
+<meta property="og:description" content="概念从数据存储来看，数组存储方式和树的存储方式可以相互转换，即数组可以转换成树，树也可以转换成数组">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20201207152029455.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20201207151844103.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70">
 <meta property="article:published_time" content="2021-04-04T02:30:24.825Z">
-<meta property="article:modified_time" content="2021-04-04T02:30:26.020Z">
+<meta property="article:modified_time" content="2021-04-04T02:54:50.543Z">
 <meta property="article:author" content="三郎">
 <meta property="article:tag" content="前端博客,后端博客,java,vue.js,jquery,html5,CSS">
 <meta name="twitter:card" content="summary">
@@ -87,6 +87,10 @@
 				
 					<a class="github" target="_blank" href="https://github.com/SanLangLOVE" title="github"><i class="icon-github"></i></a>
 		        
+					<a class="qq" target="_blank" href="http://179874957.qzone.qq.com" title="qq"><i class="icon-qq"></i></a>
+		        
+					<a class="bilibili" target="_blank" href="https://space.bilibili.com/349178018/" title="bilibili"><i class="icon-bilibili"></i></a>
+		        
 			</div>
 		</nav>
 	</header>		
@@ -122,6 +126,10 @@
 					
 						<a class="github" target="_blank" href="https://github.com/SanLangLOVE" title="github"><i class="icon-github"></i></a>
 			        
+						<a class="qq" target="_blank" href="http://179874957.qzone.qq.com" title="qq"><i class="icon-qq"></i></a>
+			        
+						<a class="bilibili" target="_blank" href="https://space.bilibili.com/349178018/" title="bilibili"><i class="icon-bilibili"></i></a>
+			        
 				</div>
 			</nav>
 
@@ -149,10 +157,26 @@
             <article id="post-三郎数据结构算法学习笔记：顺序存储二叉树" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      三郎数据结构算法学习笔记：顺序存储二叉树
+    </h1>
+  
+
+        
+        <a href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E4%BA%8C%E5%8F%89%E6%A0%91/" class="archive-article-date">
+  	<time datetime="2021-04-04T02:30:24.825Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>@<a href="%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E4%BA%8C%E5%8F%89%E6%A0%91">TOC</a></p>
-<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>从数据存储来看，数组存储方式和树的存储方式可以相互转换，<br>即数组可以转换成树，树也可以转换成数组</p>
+        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>从数据存储来看，数组存储方式和树的存储方式可以相互转换，<br>即数组可以转换成树，树也可以转换成数组</p>
+<span id="more"></span>
+
 <h2 id="图示"><a href="#图示" class="headerlink" title="图示"></a>图示</h2><p><img src="https://img-blog.csdnimg.cn/20201207152029455.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><p>顺序存储二叉树的特点:</p>
 <ol>
@@ -267,14 +291,14 @@
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          (no title)
+          三郎数据结构算法学习笔记：斐波那契[黄金分割法]查找算法
         
       </div>
     </a>
   
   
     <a href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%93%88%E5%B8%8C%E8%A1%A8%E6%9F%A5%E6%89%BE/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
+      <div class="article-nav-title">三郎数据结构算法学习笔记：哈希表查找</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -491,7 +515,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">爱写诗的计算机小萌新&lt;br&gt;人海茫茫难相遇&lt;br&gt;前路再难不自弃&lt;br&gt;一起加油</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">爱写诗的计算机小萌新&lt;br&gt;人海茫茫难相遇&lt;br&gt;前路再难不自弃&lt;br&gt;一起加油&lt;br&gt;微信：JINCC7777777</div>
   	  	
     	</section>
     
