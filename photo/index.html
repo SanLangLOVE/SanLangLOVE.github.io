@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://yoursite.com">
-  <title>贪心算法-多机调度问题 | 三郎的博客</title>
+  <title>三郎的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题目：设有n个独立的作业{1，2，…,n},由m台相同的机器进行加工处理。作业i所需的处理时间为t（i）。现约定，任何作业可以在任何一台机器上加工处理，但未完工前不允许中断处理。任何作业不能拆分成更小的子作业。多机调度问题要求给出一种作业调度方案，使所给的n个作业在尽可能短的时间内由m台机器加工处理完成。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="贪心算法-多机调度问题">
-<meta property="og:url" content="https://yoursite.com/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E5%A4%9A%E7%BA%A7%E8%B0%83%E5%BA%A6%E9%97%AE%E9%A2%98/index.html">
+  <meta name="description" content="title: ���    noDate: ‘true’    —">
+<meta property="og:type" content="website">
+<meta property="og:title" content="三郎的博客">
+<meta property="og:url" content="https://yoursite.com/photo/index.html">
 <meta property="og:site_name" content="三郎的博客">
-<meta property="og:description" content="题目：设有n个独立的作业{1，2，…,n},由m台相同的机器进行加工处理。作业i所需的处理时间为t（i）。现约定，任何作业可以在任何一台机器上加工处理，但未完工前不允许中断处理。任何作业不能拆分成更小的子作业。多机调度问题要求给出一种作业调度方案，使所给的n个作业在尽可能短的时间内由m台机器加工处理完成。">
+<meta property="og:description" content="title: ���    noDate: ‘true’    —">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-04-03T14:08:33.423Z">
-<meta property="article:modified_time" content="2021-04-02T10:59:12.744Z">
+<meta property="article:published_time" content="2021-04-04T11:20:36.401Z">
+<meta property="article:modified_time" content="2021-04-04T11:20:36.401Z">
 <meta property="article:author" content="三郎">
 <meta property="article:tag" content="前端博客,后端博客,java,vue.js,jquery,html5,CSS">
 <meta name="twitter:card" content="summary">
@@ -151,30 +151,12 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-贪心算法-多级调度问题" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      贪心算法-多机调度问题
-    </h1>
-  
-
-        
-        <a href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E5%A4%9A%E7%BA%A7%E8%B0%83%E5%BA%A6%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2021-04-03T14:08:33.423Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-03</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>题目：设有n个独立的作业{1，2，…,n},由m台相同的机器进行加工处理。<br>作业i所需的处理时间为t（i）。<br>现约定，任何作业可以在任何一台机器上加工处理，<br>但未完工前不允许中断处理。任何作业不能拆分成更小的子作业。<br>多机调度问题要求给出一种作业调度方案，<br>使所给的n个作业在尽可能短的时间内由m台机器加工处理完成。</p>
-<span id="more"></span>
-
-<h2><span id="参考代码">参考代码</span></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line">import java.util.ArrayList;</span><br><span class="line">import java.util.Collections;</span><br><span class="line">import java.util.LinkedList;</span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author 三郎</span><br><span class="line"> * @time 2020/3/11</span><br><span class="line"> */</span><br><span class="line">public class Greedy &#123;</span><br><span class="line">    public static class JobNode implements Comparable&#123;</span><br><span class="line">        int id;//作业的标号</span><br><span class="line">        int time;//作业时间</span><br><span class="line">        public JobNode(int id,int time)&#123;</span><br><span class="line">            this.id=id;</span><br><span class="line">            this.time=time;</span><br><span class="line">        &#125;</span><br><span class="line">        @Override</span><br><span class="line">        public int compareTo(Object x) &#123;//按时间从大到小排列</span><br><span class="line">            int <span class="built_in">times</span>=((JobNode)x).time;</span><br><span class="line">            <span class="keyword">if</span>(time&gt;<span class="built_in">times</span>) <span class="built_in">return</span> -1;</span><br><span class="line">            <span class="keyword">if</span>(time==<span class="built_in">times</span>) <span class="built_in">return</span> 0;</span><br><span class="line">            <span class="built_in">return</span> 1;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public static class MachineNode implements Comparable&#123;</span><br><span class="line">        int id;//机器的标号</span><br><span class="line">        int avail;//机器空闲的时间（即机器做完某一项工作的时间）</span><br><span class="line">        public MachineNode(int id,int avail)&#123;</span><br><span class="line">            this.id=id;</span><br><span class="line">            this.avail=avail;</span><br><span class="line">        &#125;</span><br><span class="line">        @Override</span><br><span class="line">        public int compareTo(Object o) &#123;//升序排序，LinkedList的first为最小的</span><br><span class="line">            int xs=((MachineNode)o).avail;</span><br><span class="line">            <span class="keyword">if</span>(avail&lt;xs) <span class="built_in">return</span> -1;</span><br><span class="line">            <span class="keyword">if</span>(avail==xs) <span class="built_in">return</span> 0;</span><br><span class="line">            <span class="built_in">return</span> 1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public static int greedy(int[] a ,int m)&#123;</span><br><span class="line">        int n=a.length;//a的下标从1开始，所以n（作业的数目）=a.length-1</span><br><span class="line">        int sum=0;</span><br><span class="line">        <span class="keyword">if</span>(n&lt;=m)&#123;</span><br><span class="line">            <span class="keyword">for</span>(int i=0;i&lt;n;i++)</span><br><span class="line">                sum+=a[i+1];</span><br><span class="line">            System.out.println(<span class="string">&quot;为每个作业分别分配一台机器&quot;</span>);</span><br><span class="line">            <span class="built_in">return</span> sum;</span><br><span class="line">        &#125;</span><br><span class="line">        List&lt;JobNode&gt; d=new ArrayList&lt;JobNode&gt;();//d保存所有的作业</span><br><span class="line">        <span class="keyword">for</span>(int i=0;i&lt;n;i++)&#123;//将所有的作业存入List中，每一项包含标号和时间</span><br><span class="line">            JobNode jb=new JobNode(i+1,a[i]);</span><br><span class="line">            d.add(jb);</span><br><span class="line">        &#125;</span><br><span class="line">        Collections.sort(d);//对作业的List进行排序</span><br><span class="line">        LinkedList&lt;MachineNode&gt; h=new LinkedList&lt;MachineNode&gt;();//h保存所有的机器</span><br><span class="line">        <span class="keyword">for</span>(int i=1;i&lt;=m;i++)&#123;//将所有的机器存入LinkedList中</span><br><span class="line">            MachineNode x=new MachineNode(i,0);</span><br><span class="line">            //初始时，每台机器的空闲时间（完成上一个作业的时间）都为0</span><br><span class="line">            h.add(x);</span><br><span class="line">        &#125;</span><br><span class="line">        int <span class="built_in">test</span>=h.size();</span><br><span class="line">        <span class="keyword">for</span>(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">              Collections.sort(h);</span><br><span class="line">            MachineNode x=h.peek();</span><br><span class="line">            System.out.println(<span class="string">&quot;将机器&quot;</span>+x.id+<span class="string">&quot;从&quot;</span>+x.avail+<span class="string">&quot;到&quot;</span></span><br><span class="line">                              +(x.avail+d.get(i).time)</span><br><span class="line">                              +<span class="string">&quot;的时间段分配给作业&quot;</span>+d.get(i).id);</span><br><span class="line">            x.avail+=d.get(i).time;</span><br><span class="line">            sum=x.avail;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int[] a=&#123;14,2,3,4,5,6,8,8,9&#125;;</span><br><span class="line">              // 1,2,3,4,5,6,7 ,8,9</span><br><span class="line">        int m=3;</span><br><span class="line">        int sum=greedy(a,m);</span><br><span class="line">        System.out.println(<span class="string">&quot;总时间为：&quot;</span>+sum);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">/**</span><br><span class="line"> 运行结果：</span><br><span class="line"> 将机器1从0到14的时间段分配给作业1</span><br><span class="line"> 将机器2从0到9的时间段分配给作业9</span><br><span class="line"> 将机器3从0到8的时间段分配给作业7</span><br><span class="line"> 将机器3从8到16的时间段分配给作业8</span><br><span class="line"> 将机器2从9到15的时间段分配给作业6</span><br><span class="line"> 将机器1从14到19的时间段分配给作业5</span><br><span class="line"> 将机器2从15到19的时间段分配给作业4</span><br><span class="line"> 将机器3从16到19的时间段分配给作业3</span><br><span class="line"> 将机器3从19到21的时间段分配给作业2</span><br><span class="line"> 总时间为：21</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
+        <p>title: ���<br>    noDate: ‘true’<br>    —<br>    <link type="text/css" href="/fancybox/jquery.fancybox.css" rel="stylesheet"><br>    <div class="instagram"><section class="archives album"><ul class="img-box-ul"></ul></section></div></p>
 
       
 
@@ -259,7 +241,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://yoursite.com/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E5%A4%9A%E7%BA%A7%E8%B0%83%E5%BA%A6%E9%97%AE%E9%A2%98/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://yoursite.com/photo/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -271,25 +253,6 @@
 </article>
 
   
-<nav id="article-nav">
-  
-    <a href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E6%97%85%E8%A1%8C%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          贪心算法-旅行规划问题
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E8%83%8C%E5%8C%85%E6%90%AC%E8%BF%90%E9%97%AE%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">贪心算法-背包搬运问题</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -315,8 +278,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "https://yoursite.com/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E5%A4%9A%E7%BA%A7%E8%B0%83%E5%BA%A6%E9%97%AE%E9%A2%98/", 
-    sourceId: "贪心算法-多级调度问题",
+    url: "https://yoursite.com/photo/index.html", 
+    sourceId: "",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
@@ -325,7 +288,7 @@
   
 
   
-  <div id="SOHUCS" sid="贪心算法-多级调度问题" ></div> 
+  <div id="SOHUCS" sid="" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
@@ -390,7 +353,7 @@ gitalk.render('gitalk-container')
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
