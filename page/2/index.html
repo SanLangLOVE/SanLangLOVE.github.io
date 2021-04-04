@@ -5,13 +5,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="https://sanlang.xyz">
+  <link rel="dns-prefetch" href="https://yoursite.com">
   <title>三郎的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="个人技术博客">
 <meta property="og:type" content="website">
 <meta property="og:title" content="三郎的博客">
-<meta property="og:url" content="https://sanlang.xyz/page/2/index.html">
+<meta property="og:url" content="https://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="三郎的博客">
 <meta property="og:description" content="个人技术博客">
 <meta property="og:locale" content="zh_CN">
@@ -150,6 +150,269 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-三郎前端特效学习源代码：图片主页轮播组件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/04/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%9B%BE%E7%89%87%E4%B8%BB%E9%A1%B5%E8%BD%AE%E6%92%AD%E7%BB%84%E4%BB%B6/">三郎前端特效学习源代码：图片主页轮播组件</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/04/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%9B%BE%E7%89%87%E4%B8%BB%E9%A1%B5%E8%BD%AE%E6%92%AD%E7%BB%84%E4%BB%B6/" class="archive-article-date">
+  	<time datetime="2021-04-04T02:28:57.042Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- toc -->
+
+<ul>
+<li><a href="#%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D">简单介绍</a></li>
+<li><a href="#%E6%95%88%E6%9E%9C%E5%9B%BE">效果图</a></li>
+<li><a href="#%E6%BA%90%E4%BB%A3%E7%A0%81">源代码</a><ul>
+<li><a href="#html%E9%83%A8%E5%88%86">html部分</a></li>
+</ul>
+</li>
+<li><a href="#js%E9%83%A8%E5%88%86">js部分</a><ul>
+<li><a href="#css%E9%83%A8%E5%88%86">css部分</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h2 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h2><p>各大网站都比较常用的主页轮播组件<br>可以自己改改就能用</p>
+<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="https://img-blog.csdnimg.cn/20201210134325606.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+        
+          <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%9B%BE%E7%89%87%E4%B8%BB%E9%A1%B5%E8%BD%AE%E6%92%AD%E7%BB%84%E4%BB%B6/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%9B%BE%E7%89%87%E4%B8%BB%E9%A1%B5%E8%BD%AE%E6%92%AD%E7%BB%84%E4%BB%B6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+      <!--添加代码开始-->
+      
+        <div class="declare" hidden="hidden"></div>
+      
+  
+    <article id="post-传统的JDBC 编程的分析（入门必会）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/04/%E4%BC%A0%E7%BB%9F%E7%9A%84JDBC%20%E7%BC%96%E7%A8%8B%E7%9A%84%E5%88%86%E6%9E%90%EF%BC%88%E5%85%A5%E9%97%A8%E5%BF%85%E4%BC%9A%EF%BC%89/">JDBC 编程的分析</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/04/%E4%BC%A0%E7%BB%9F%E7%9A%84JDBC%20%E7%BC%96%E7%A8%8B%E7%9A%84%E5%88%86%E6%9E%90%EF%BC%88%E5%85%A5%E9%97%A8%E5%BF%85%E4%BC%9A%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2021-04-04T02:27:55.209Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- toc -->
+
+<ul>
+<li><a href="#%E4%BC%A0%E7%BB%9F%E7%9A%84jdbc-%E7%BC%96%E7%A8%8B%E7%9A%84%E5%88%86%E6%9E%90">传统的JDBC 编程的分析</a></li>
+</ul>
+<!-- tocstop -->
+
+<h2 id="传统的JDBC-编程的分析"><a href="#传统的JDBC-编程的分析" class="headerlink" title="传统的JDBC 编程的分析"></a>传统的JDBC 编程的分析</h2><p><strong>步骤：</strong></p>
+<p>//加载数据库驱动</p>
+<p>//通过驱动管理类获取数据库链接</p>
+<p>//定义 sql 语句 ?表示占位符</p>
+<p>//获取预处理 statement</p>
+<p>//设置参数，第一个参数为 sql 语句中参数的序号（从 1 开始），第二个参数为设置的参数值</p>
+<p>//向数据库发出 sql 执行查询，查询出结果集</p>
+<p>//遍历查询结果集</p>
+<p>//释放资源</p>
+        
+          <a class="article-more-a" href="/2021/04/04/%E4%BC%A0%E7%BB%9F%E7%9A%84JDBC%20%E7%BC%96%E7%A8%8B%E7%9A%84%E5%88%86%E6%9E%90%EF%BC%88%E5%85%A5%E9%97%A8%E5%BF%85%E4%BC%9A%EF%BC%89/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/04/%E4%BC%A0%E7%BB%9F%E7%9A%84JDBC%20%E7%BC%96%E7%A8%8B%E7%9A%84%E5%88%86%E6%9E%90%EF%BC%88%E5%85%A5%E9%97%A8%E5%BF%85%E4%BC%9A%EF%BC%89/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+      <!--添加代码开始-->
+      
+        <div class="declare" hidden="hidden"></div>
+      
+  
+    <article id="post-详细搭建 Mybatis 开发环境和入门工程（必会）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/04/%E8%AF%A6%E7%BB%86%E6%90%AD%E5%BB%BA%20Mybatis%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%92%8C%E5%85%A5%E9%97%A8%E5%B7%A5%E7%A8%8B%EF%BC%88%E5%BF%85%E4%BC%9A%EF%BC%89/">详细搭建 Mybatis 开发环境和入门工程（必会）</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/04/%E8%AF%A6%E7%BB%86%E6%90%AD%E5%BB%BA%20Mybatis%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%92%8C%E5%85%A5%E9%97%A8%E5%B7%A5%E7%A8%8B%EF%BC%88%E5%BF%85%E4%BC%9A%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2021-04-04T02:27:40.209Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- toc -->
+
+<ul>
+<li><a href="#%E5%88%9B%E5%BB%BA-maven-%E5%B7%A5%E7%A8%8B">创建 maven 工程</a></li>
+<li><a href="#%E6%B7%BB%E5%8A%A0-mybatis345-%E7%9A%84%E5%9D%90%E6%A0%87">添加 Mybatis3.4.5 的坐标</a></li>
+<li><a href="#%E7%BC%96%E5%86%99-user-%E5%AE%9E%E4%BD%93%E7%B1%BB">编写 User 实体类</a></li>
+<li><a href="#%E7%BC%96%E5%86%99%E6%8C%81%E4%B9%85%E5%B1%82%E6%8E%A5%E5%8F%A3-iuserdao">编写持久层接口 IUserDao</a></li>
+<li><a href="#%E7%BC%96%E5%86%99%E6%8C%81%E4%B9%85%E5%B1%82%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6-iuserdaoxml">编写持久层接口的映射文件 IUserDao.xml</a></li>
+<li><a href="#%E7%BC%96%E5%86%99-sqlmapconfigxml-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">编写 SqlMapConfig.xml 配置文件</a></li>
+<li><a href="#%E7%BC%96%E5%86%99%E6%B5%8B%E8%AF%95%E7%B1%BB">编写测试类</a></li>
+<li><a href="#%E5%B0%8F%E7%BB%93">小结</a></li>
+</ul>
+<!-- tocstop -->
+
+<h3 id="创建-maven-工程"><a href="#创建-maven-工程" class="headerlink" title="创建 maven 工程"></a>创建 maven 工程</h3><p>创建 mybatis01 的工程，工程信息如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Groupid:com.sanlang</span><br><span class="line">ArtifactId:mybatis01</span><br><span class="line">Packing:jar</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2021/04/04/%E8%AF%A6%E7%BB%86%E6%90%AD%E5%BB%BA%20Mybatis%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%92%8C%E5%85%A5%E9%97%A8%E5%B7%A5%E7%A8%8B%EF%BC%88%E5%BF%85%E4%BC%9A%EF%BC%89/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/04/%E8%AF%A6%E7%BB%86%E6%90%AD%E5%BB%BA%20Mybatis%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%92%8C%E5%85%A5%E9%97%A8%E5%B7%A5%E7%A8%8B%EF%BC%88%E5%BF%85%E4%BC%9A%EF%BC%89/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+      <!--添加代码开始-->
+      
+        <div class="declare" hidden="hidden"></div>
+      
   
     <article id="post-软件测试学习笔记：dos命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -533,7 +796,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="其他的话"><a href="#其他的话" class="headerlink" title="其他的话"></a>其他的话</h2><p>就这前端特效还有人网上拿去卖钱<br>难怪中国计算机学习环境不行<br>唉</p>
+        <!-- toc -->
+
+<ul>
+<li><a href="#%E5%85%B6%E4%BB%96%E7%9A%84%E8%AF%9D">其他的话</a></li>
+<li><a href="#%E6%95%88%E6%9E%9C%E5%9B%BE">效果图</a></li>
+<li><a href="#%E5%AE%8C%E6%95%B4%E6%BA%90%E4%BB%A3%E7%A0%81">完整源代码</a></li>
+</ul>
+<!-- tocstop -->
+
+<h2 id="其他的话"><a href="#其他的话" class="headerlink" title="其他的话"></a>其他的话</h2><p>就这前端特效还有人网上拿去卖钱<br>难怪中国计算机学习环境不行<br>唉</p>
 <h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="https://img-blog.csdnimg.cn/20210126184332819.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70" alt="纯"></p>
         
           <a class="article-more-a" href="/2021/04/03/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%8A%A8%E6%80%81%E6%A8%B1%E8%8A%B1%E8%90%BD%E6%B0%B4%E6%BA%90%E4%BB%A3%E7%A0%81/#more">more >></a>
@@ -606,7 +878,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="https://img-blog.csdnimg.cn/20210126183458835.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+        <!-- toc -->
+
+<ul>
+<li><a href="#%E6%95%88%E6%9E%9C%E5%9B%BE">效果图</a></li>
+<li><a href="#%E5%8F%82%E8%80%83%E6%BA%90%E4%BB%A3%E7%A0%81">参考源代码</a><ul>
+<li><a href="#js%E9%83%A8%E5%88%86">js部分</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="https://img-blog.csdnimg.cn/20210126183458835.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>是动态的哦</p>
         
           <a class="article-more-a" href="/2021/04/03/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%8A%A8%E6%80%81%E6%94%BE%E5%A4%A7%E5%8D%A1%E9%80%9A%E6%A8%B1%E8%8A%B1/#more">more >></a>
@@ -623,223 +906,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/04/03/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%8A%A8%E6%80%81%E6%94%BE%E5%A4%A7%E5%8D%A1%E9%80%9A%E6%A8%B1%E8%8A%B1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-      <!--添加代码开始-->
-      
-        <div class="declare" hidden="hidden"></div>
-      
-  
-    <article id="post-软件测试学习笔记：测试用例的设计方法（全）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/03/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%A8%EF%BC%89/">测试用例的设计方法（全）</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/03/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-04-03T14:08:33.409Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="等价类划分方法："><a href="#等价类划分方法：" class="headerlink" title="等价类划分方法："></a>等价类划分方法：</h2><h3 id="一-方法简介"><a href="#一-方法简介" class="headerlink" title="一.方法简介"></a>一.方法简介</h3><h5 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h5><p>  是把所有可能的输入数据,即程序的输入域划分成若干部分（子集）,<br>  然后从每一个子集中选取少数具有代表性的数据作为测试用例。<br>  该方法是一种重要的,常用的黑盒测试用例设计方法。</p>
-        
-          <a class="article-more-a" href="/2021/04/03/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%A8%EF%BC%89/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/03/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%A8%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-      <!--添加代码开始-->
-      
-        <div class="declare" hidden="hidden"></div>
-      
-  
-    <article id="post-操作系统原理课程设计：模拟文件管理系统简单介绍和全部源代码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/03/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%9A%E6%A8%A1%E6%8B%9F%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%85%A8%E9%83%A8%E6%BA%90%E4%BB%A3%E7%A0%81/">操作系统原理课程设计：模拟文件管理系统简单介绍和全部源代码</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/03/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%9A%E6%A8%A1%E6%8B%9F%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%85%A8%E9%83%A8%E6%BA%90%E4%BB%A3%E7%A0%81/" class="archive-article-date">
-  	<time datetime="2021-04-03T14:08:33.405Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>@<a href="%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%9A%E6%A8%A1%E6%8B%9F%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%85%A8%E9%83%A8%E6%BA%90%E4%BB%A3%E7%A0%81">TOC</a></p>
-<h2 id="零、前面的话"><a href="#零、前面的话" class="headerlink" title="零、前面的话"></a>零、前面的话</h2><p>本系统大部分参考同济大学2016级软件学院学长：洪嘉勇<br><strong>在此表示感谢！</strong>知道了差距和问题，也学习了不少。<br>幸而因此我的期末课设验收五分钟不到就顺利通过！<br>分享一下仅供大家学习**</p>
-        
-          <a class="article-more-a" href="/2021/04/03/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%9A%E6%A8%A1%E6%8B%9F%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%85%A8%E9%83%A8%E6%BA%90%E4%BB%A3%E7%A0%81/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/03/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%9A%E6%A8%A1%E6%8B%9F%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%85%A8%E9%83%A8%E6%BA%90%E4%BB%A3%E7%A0%81/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-      <!--添加代码开始-->
-      
-        <div class="declare" hidden="hidden"></div>
-      
-  
-    <article id="post-SpringBoot与整合其他技术 " class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/03/SpringBoot%E4%B8%8E%E6%95%B4%E5%90%88%E5%85%B6%E4%BB%96%E6%8A%80%E6%9C%AF%20/">SpringBoot与整合其他技术</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/03/SpringBoot%E4%B8%8E%E6%95%B4%E5%90%88%E5%85%B6%E4%BB%96%E6%8A%80%E6%9C%AF%20/" class="archive-article-date">
-  	<time datetime="2021-04-03T14:08:33.402Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-SpringBoot整合Mybatis"><a href="#1-SpringBoot整合Mybatis" class="headerlink" title="1 SpringBoot整合Mybatis"></a>1 SpringBoot整合Mybatis</h2><h3 id="1-1-添加Mybatis的起步依赖"><a href="#1-1-添加Mybatis的起步依赖" class="headerlink" title="1.1 添加Mybatis的起步依赖"></a>1.1 添加Mybatis的起步依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--mybatis起步依赖--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis.spring.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.1.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2021/04/03/SpringBoot%E4%B8%8E%E6%95%B4%E5%90%88%E5%85%B6%E4%BB%96%E6%8A%80%E6%9C%AF%20/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/03/SpringBoot%E4%B8%8E%E6%95%B4%E5%90%88%E5%85%B6%E4%BB%96%E6%8A%80%E6%9C%AF%20/">展开全文 >></a>
         </p>
       
 

@@ -5,13 +5,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="https://sanlang.xyz">
+  <link rel="dns-prefetch" href="https://yoursite.com">
   <title>三郎的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="个人技术博客">
 <meta property="og:type" content="website">
 <meta property="og:title" content="三郎的博客">
-<meta property="og:url" content="https://sanlang.xyz/index.html">
+<meta property="og:url" content="https://yoursite.com/index.html">
 <meta property="og:site_name" content="三郎的博客">
 <meta property="og:description" content="个人技术博客">
 <meta property="og:locale" content="zh_CN">
@@ -151,6 +151,258 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-三郎数据结构算法学习笔记：希尔排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/">三郎数据结构算法学习笔记：希尔排序</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/" class="archive-article-date">
+  	<time datetime="2021-04-04T05:40:14.659Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- toc -->
+
+<ul>
+<li><a href="#%E6%8E%92%E5%BA%8F%E4%BB%8B%E7%BB%8D">排序介绍</a></li>
+<li><a href="#%E5%9B%BE%E7%A4%BA">图示</a></li>
+<li><a href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C">运行结果</a></li>
+<li><a href="#%E6%BA%90%E4%BB%A3%E7%A0%81">源代码</a></li>
+</ul>
+<!-- tocstop -->
+
+<h2 id="排序介绍"><a href="#排序介绍" class="headerlink" title="排序介绍"></a>排序介绍</h2><p>希尔排序是希尔（Donald Shell）于 1959 年提出的一种排序算法。希尔排序也是一种<strong>插入排序</strong>，它是简单插入排序经过改进之后的一个更高效的版本，也称为<strong>缩小增量排序</strong></p>
+<h2 id="图示"><a href="#图示" class="headerlink" title="图示"></a>图示</h2><p><img src="https://img-blog.csdnimg.cn/20201124131904846.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+        
+          <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+      <!--添加代码开始-->
+      
+        <div class="declare" hidden="hidden"></div>
+      
+  
+    <article id="post-三郎数据结构算法学习笔记：快速排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">三郎数据结构算法学习笔记：快速排序</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" class="archive-article-date">
+  	<time datetime="2021-04-04T05:37:16.217Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- toc -->
+
+<ul>
+<li><a href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E6%B3%95%E4%BB%8B%E7%BB%8D">快速排序法介绍</a><ul>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3">基本思想：</a></li>
+</ul>
+</li>
+<li><a href="#%E5%9B%BE%E8%A7%A3">图解</a></li>
+<li><a href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C">运行结果</a></li>
+<li><a href="#%E6%BA%90%E4%BB%A3%E7%A0%81">源代码</a></li>
+</ul>
+<!-- tocstop -->
+
+<h2 id="快速排序法介绍"><a href="#快速排序法介绍" class="headerlink" title="快速排序法介绍"></a>快速排序法介绍</h2><p>快速排序（Quicksort）是对冒泡排序的一种改进。</p>
+<h3 id="基本思想："><a href="#基本思想：" class="headerlink" title="基本思想："></a>基本思想：</h3><p>通过一趟排序将要排序的数据分割成独立的两部分，<br>其中一部分的所有数据都比另外一部分的所有数据都要小，<br>然后再按此方法对这两部分数据分别进行快速排序，<br>整个排序过程可以递归进行，以此达到整个数据变成有序序列</p>
+        
+          <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+      <!--添加代码开始-->
+      
+        <div class="declare" hidden="hidden"></div>
+      
+  
+    <article id="post-三郎数据结构算法学习笔记：基数排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/">三郎数据结构算法学习笔记：基数排序</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/" class="archive-article-date">
+  	<time datetime="2021-04-04T05:35:57.305Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- toc -->
+
+<ul>
+<li><a href="#%E6%8E%92%E5%BA%8F%E4%BB%8B%E7%BB%8D">排序介绍</a></li>
+<li><a href="#%E6%80%9D%E6%83%B3">思想</a></li>
+<li><a href="#%E5%9B%BE%E7%A4%BA">图示</a></li>
+<li><a href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C">运行结果</a></li>
+<li><a href="#%E6%BA%90%E4%BB%A3%E7%A0%81">源代码</a></li>
+</ul>
+<!-- tocstop -->
+
+<h2 id="排序介绍"><a href="#排序介绍" class="headerlink" title="排序介绍"></a>排序介绍</h2><p>基数排序（radix sort）属于“分配式排序”（distribution sort），<br>又称“<strong>桶子法</strong>”（bucket sort）或 bin sort，顾名思义，它是通过键值的各个位的值，将要排序的元素分配至某些“桶”中，达到排序的作用<br>基数排序法是属于稳定性的排序，基数排序法的是效率高的稳定性排序法<br>基数排序(Radix Sort)是<strong>桶排序</strong>的扩展<br>基数排序是 1887 年赫尔曼·何乐礼发明的。它是这样实现的：将整数按位数切割成不同的数字，然后按每个位数分别比较。</p>
+        
+          <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+      <!--添加代码开始-->
+      
+        <div class="declare" hidden="hidden"></div>
+      
+  
     <article id="post-三郎数据结构算法学习笔记：插值查找算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -171,7 +423,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="算法介绍"><a href="#算法介绍" class="headerlink" title="算法介绍"></a>算法介绍</h2><p>插值查找算法<br>插值查找原理介绍: <strong>插值查找算法类似于二分查找</strong>，不同的是插<strong>值查找每次从自适应 mid 处开始查找</strong>。<br>将折半查找中的求 mid 索引的公式 , low 表示左边索引 left, high 表示右边索引；right. key 就是前面我们讲的 findVal</p>
+        <!-- toc -->
+
+<ul>
+<li><a href="#%E7%AE%97%E6%B3%95%E4%BB%8B%E7%BB%8D">算法介绍</a></li>
+<li><a href="#%E5%9B%BE%E7%A4%BA">图示</a></li>
+<li><a href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C">运行结果</a></li>
+<li><a href="#%E6%BA%90%E4%BB%A3%E7%A0%81">源代码</a></li>
+</ul>
+<!-- tocstop -->
+
+<h2 id="算法介绍"><a href="#算法介绍" class="headerlink" title="算法介绍"></a>算法介绍</h2><p>插值查找算法<br>插值查找原理介绍: <strong>插值查找算法类似于二分查找</strong>，不同的是插<strong>值查找每次从自适应 mid 处开始查找</strong>。<br>将折半查找中的求 mid 索引的公式 , low 表示左边索引 left, high 表示右边索引；right. key 就是前面我们讲的 findVal</p>
         
           <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E6%8F%92%E5%80%BC%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/#more">more >></a>
         
@@ -243,7 +505,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="算法介绍"><a href="#算法介绍" class="headerlink" title="算法介绍"></a>算法介绍</h2><p>斐波那契(黄金分割法)查找基本介绍:<br>黄金分割点是指把一条线段分割为两部分，<br>使其中<strong>一部分与全长之比等于另一部分与这部分之比</strong>。<br>取其前三位数字的近似值是 0.618。<br>由于按此<strong>比例设计的造型十分美丽，因此称为黄金分割，也称为中外比</strong>。<br>这是一个神奇的数字，会带来意向不大的效果。<br>斐波那契数列 {1, 1, 2, 3, 5, 8, 13, 21, 34, 55 }<br>发现斐波那契数列的两个相邻数 的比例，<strong>无限接近 黄金分割值0.618</strong></p>
+        <!-- toc -->
+
+<ul>
+<li><a href="#%E7%AE%97%E6%B3%95%E4%BB%8B%E7%BB%8D">算法介绍</a></li>
+<li><a href="#%E5%8E%9F%E7%90%86">原理</a></li>
+<li><a href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C">运行结果</a></li>
+<li><a href="#%E6%BA%90%E4%BB%A3%E7%A0%81">源代码</a></li>
+</ul>
+<!-- tocstop -->
+
+<h2 id="算法介绍"><a href="#算法介绍" class="headerlink" title="算法介绍"></a>算法介绍</h2><p>斐波那契(黄金分割法)查找基本介绍:<br>黄金分割点是指把一条线段分割为两部分，<br>使其中<strong>一部分与全长之比等于另一部分与这部分之比</strong>。<br>取其前三位数字的近似值是 0.618。<br>由于按此<strong>比例设计的造型十分美丽，因此称为黄金分割，也称为中外比</strong>。<br>这是一个神奇的数字，会带来意向不大的效果。<br>斐波那契数列 {1, 1, 2, 3, 5, 8, 13, 21, 34, 55 }<br>发现斐波那契数列的两个相邻数 的比例，<strong>无限接近 黄金分割值0.618</strong></p>
         
           <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91(%E9%BB%84%E9%87%91%E5%88%86%E5%89%B2%E6%B3%95)%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/#more">more >></a>
         
@@ -315,7 +587,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>从数据存储来看，数组存储方式和树的存储方式可以相互转换，<br>即数组可以转换成树，树也可以转换成数组</p>
+        <!-- toc -->
+
+<ul>
+<li><a href="#%E6%A6%82%E5%BF%B5">概念</a></li>
+<li><a href="#%E5%9B%BE%E7%A4%BA">图示</a></li>
+<li><a href="#%E7%89%B9%E7%82%B9">特点</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B">示例</a></li>
+<li><a href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C">运行结果</a></li>
+<li><a href="#%E6%BA%90%E4%BB%A3%E7%A0%81">源代码</a></li>
+</ul>
+<!-- tocstop -->
+
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>从数据存储来看，数组存储方式和树的存储方式可以相互转换，<br>即数组可以转换成树，树也可以转换成数组</p>
         
           <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E4%BA%8C%E5%8F%89%E6%A0%91/#more">more >></a>
         
@@ -459,7 +743,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="二叉树遍历的说明"><a href="#二叉树遍历的说明" class="headerlink" title="二叉树遍历的说明"></a>二叉树遍历的说明</h2><p>前序遍历:   根左右<br>中序遍历:   左根右<br>后序遍历：左右根</p>
+        <!-- toc -->
+
+<ul>
+<li><a href="#%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E7%9A%84%E8%AF%B4%E6%98%8E">二叉树遍历的说明</a></li>
+<li><a href="#%E9%81%8D%E5%8E%86%E5%9B%BE%E7%A4%BA">遍历图示</a></li>
+<li><a href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C">运行结果</a></li>
+<li><a href="#%E6%BA%90%E4%BB%A3%E7%A0%81%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5%E8%87%AA%E5%B7%B1%E5%8E%BB%E6%8E%89%E6%B3%A8%E9%87%8A">源代码（增删改查自己去掉注释）</a></li>
+</ul>
+<!-- tocstop -->
+
+<h2 id="二叉树遍历的说明"><a href="#二叉树遍历的说明" class="headerlink" title="二叉树遍历的说明"></a>二叉树遍历的说明</h2><p>前序遍历:   根左右<br>中序遍历:   左根右<br>后序遍历：左右根</p>
         
           <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86%E5%8F%8A%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/#more">more >></a>
         
@@ -531,7 +825,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h2><p>我们经常可以看见一些电影动画有，键盘输入的动画，<br>用H5+css+js也能快速实现<br>很简单也很酷<br>源代码来源GitHub</p>
+        <!-- toc -->
+
+<ul>
+<li><a href="#%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D">简单介绍</a></li>
+<li><a href="#%E6%95%88%E6%9E%9C%E5%9B%BE">效果图</a></li>
+<li><a href="#%E5%AE%8C%E6%95%B4%E6%BA%90%E4%BB%A3%E7%A0%81">完整源代码</a><ul>
+<li><a href="#h5%E9%83%A8%E5%88%86">H5部分</a></li>
+<li><a href="#css%E9%83%A8%E5%88%86">css部分</a></li>
+<li><a href="#js%E9%83%A8%E5%88%86">js部分</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h2 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h2><p>我们经常可以看见一些电影动画有，键盘输入的动画，<br>用H5+css+js也能快速实现<br>很简单也很酷<br>源代码来源GitHub</p>
         
           <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%8A%A8%E6%80%81%E9%94%AE%E5%85%A5%E5%8A%A8%E7%94%BB%20H5+css+js/#more">more >></a>
         
@@ -603,7 +911,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h2><p><strong>类似电影里的魔法效果</strong><br>轨迹次数速度都可以自己改改</p>
+        <!-- toc -->
+
+<ul>
+<li><a href="#%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D">简单介绍</a></li>
+<li><a href="#%E6%95%88%E6%9E%9C%E5%9B%BE">效果图</a></li>
+<li><a href="#%E6%BA%90%E4%BB%A3%E7%A0%81">源代码</a><ul>
+<li><a href="#html%E9%83%A8%E5%88%86">html部分</a></li>
+<li><a href="#js%E9%83%A8%E5%88%86">js部分</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E4%B8%AAjs%E9%83%A8%E5%88%86">第二个js部分</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h2 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h2><p><strong>类似电影里的魔法效果</strong><br>轨迹次数速度都可以自己改改</p>
         
           <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E9%AD%94%E6%B3%95%E6%97%8B%E8%BD%AC%E7%B2%92%E5%AD%90%E5%8A%A8%E6%80%81%E6%B8%90%E5%8F%98%E7%89%B9%E6%95%88/#more">more >></a>
         
@@ -619,232 +941,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E9%AD%94%E6%B3%95%E6%97%8B%E8%BD%AC%E7%B2%92%E5%AD%90%E5%8A%A8%E6%80%81%E6%B8%90%E5%8F%98%E7%89%B9%E6%95%88/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-      <!--添加代码开始-->
-      
-        <div class="declare" hidden="hidden"></div>
-      
-  
-    <article id="post-三郎前端特效学习源代码：图片主页轮播组件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/04/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%9B%BE%E7%89%87%E4%B8%BB%E9%A1%B5%E8%BD%AE%E6%92%AD%E7%BB%84%E4%BB%B6/">三郎前端特效学习源代码：图片主页轮播组件</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/04/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%9B%BE%E7%89%87%E4%B8%BB%E9%A1%B5%E8%BD%AE%E6%92%AD%E7%BB%84%E4%BB%B6/" class="archive-article-date">
-  	<time datetime="2021-04-04T02:28:57.042Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h2><p>各大网站都比较常用的主页轮播组件<br>可以自己改改就能用</p>
-<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="https://img-blog.csdnimg.cn/20201210134325606.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-        
-          <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%9B%BE%E7%89%87%E4%B8%BB%E9%A1%B5%E8%BD%AE%E6%92%AD%E7%BB%84%E4%BB%B6/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%9B%BE%E7%89%87%E4%B8%BB%E9%A1%B5%E8%BD%AE%E6%92%AD%E7%BB%84%E4%BB%B6/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-      <!--添加代码开始-->
-      
-        <div class="declare" hidden="hidden"></div>
-      
-  
-    <article id="post-传统的JDBC 编程的分析（入门必会）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/04/%E4%BC%A0%E7%BB%9F%E7%9A%84JDBC%20%E7%BC%96%E7%A8%8B%E7%9A%84%E5%88%86%E6%9E%90%EF%BC%88%E5%85%A5%E9%97%A8%E5%BF%85%E4%BC%9A%EF%BC%89/">JDBC 编程的分析</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/04/%E4%BC%A0%E7%BB%9F%E7%9A%84JDBC%20%E7%BC%96%E7%A8%8B%E7%9A%84%E5%88%86%E6%9E%90%EF%BC%88%E5%85%A5%E9%97%A8%E5%BF%85%E4%BC%9A%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-04-04T02:27:55.209Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="传统的JDBC-编程的分析"><a href="#传统的JDBC-编程的分析" class="headerlink" title="传统的JDBC 编程的分析"></a>传统的JDBC 编程的分析</h2><p><strong>步骤：</strong></p>
-<p>//加载数据库驱动</p>
-<p>//通过驱动管理类获取数据库链接</p>
-<p>//定义 sql 语句 ?表示占位符</p>
-<p>//获取预处理 statement</p>
-<p>//设置参数，第一个参数为 sql 语句中参数的序号（从 1 开始），第二个参数为设置的参数值</p>
-<p>//向数据库发出 sql 执行查询，查询出结果集</p>
-<p>//遍历查询结果集</p>
-<p>//释放资源</p>
-        
-          <a class="article-more-a" href="/2021/04/04/%E4%BC%A0%E7%BB%9F%E7%9A%84JDBC%20%E7%BC%96%E7%A8%8B%E7%9A%84%E5%88%86%E6%9E%90%EF%BC%88%E5%85%A5%E9%97%A8%E5%BF%85%E4%BC%9A%EF%BC%89/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/04/%E4%BC%A0%E7%BB%9F%E7%9A%84JDBC%20%E7%BC%96%E7%A8%8B%E7%9A%84%E5%88%86%E6%9E%90%EF%BC%88%E5%85%A5%E9%97%A8%E5%BF%85%E4%BC%9A%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-      <!--添加代码开始-->
-      
-        <div class="declare" hidden="hidden"></div>
-      
-  
-    <article id="post-详细搭建 Mybatis 开发环境和入门工程（必会）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/04/%E8%AF%A6%E7%BB%86%E6%90%AD%E5%BB%BA%20Mybatis%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%92%8C%E5%85%A5%E9%97%A8%E5%B7%A5%E7%A8%8B%EF%BC%88%E5%BF%85%E4%BC%9A%EF%BC%89/">详细搭建 Mybatis 开发环境和入门工程（必会）</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/04/%E8%AF%A6%E7%BB%86%E6%90%AD%E5%BB%BA%20Mybatis%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%92%8C%E5%85%A5%E9%97%A8%E5%B7%A5%E7%A8%8B%EF%BC%88%E5%BF%85%E4%BC%9A%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-04-04T02:27:40.209Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="创建-maven-工程"><a href="#创建-maven-工程" class="headerlink" title="创建 maven 工程"></a>创建 maven 工程</h3><p>创建 mybatis01 的工程，工程信息如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Groupid:com.sanlang</span><br><span class="line">ArtifactId:mybatis01</span><br><span class="line">Packing:jar</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2021/04/04/%E8%AF%A6%E7%BB%86%E6%90%AD%E5%BB%BA%20Mybatis%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%92%8C%E5%85%A5%E9%97%A8%E5%B7%A5%E7%A8%8B%EF%BC%88%E5%BF%85%E4%BC%9A%EF%BC%89/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/04/%E8%AF%A6%E7%BB%86%E6%90%AD%E5%BB%BA%20Mybatis%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%92%8C%E5%85%A5%E9%97%A8%E5%B7%A5%E7%A8%8B%EF%BC%88%E5%BF%85%E4%BC%9A%EF%BC%89/">展开全文 >></a>
         </p>
       
 
