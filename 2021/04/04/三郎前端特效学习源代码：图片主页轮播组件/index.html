@@ -6,18 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://yoursite.com">
-  <title>Archives: 2021 | 三郎的博客</title>
+  <title>三郎前端特效学习源代码：图片主页轮播组件 | 三郎的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="个人技术博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="三郎的博客">
-<meta property="og:url" content="https://yoursite.com/archives/2021/page/2/index.html">
+  <meta name="description" content="@TOC 简单介绍各大网站都比较常用的主页轮播组件可以自己改改就能用 效果图    源代码html部分12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879">
+<meta property="og:type" content="article">
+<meta property="og:title" content="三郎前端特效学习源代码：图片主页轮播组件">
+<meta property="og:url" content="https://yoursite.com/2021/04/04/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%9B%BE%E7%89%87%E4%B8%BB%E9%A1%B5%E8%BD%AE%E6%92%AD%E7%BB%84%E4%BB%B6/index.html">
 <meta property="og:site_name" content="三郎的博客">
-<meta property="og:description" content="个人技术博客">
+<meta property="og:description" content="@TOC 简单介绍各大网站都比较常用的主页轮播组件可以自己改改就能用 效果图    源代码html部分12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201210134325606.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201210134130432.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201210134247549.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2021-04-04T02:28:57.042Z">
+<meta property="article:modified_time" content="2021-04-04T02:33:58.208Z">
 <meta property="article:author" content="三郎">
 <meta property="article:tag" content="前端博客,后端博客,java,vue.js,jquery,html5,CSS">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20201210134325606.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="三郎的博客" type="application/atom+xml">
   
@@ -141,298 +147,209 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-三郎前端特效学习源代码：图片主页轮播组件" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      三郎前端特效学习源代码：图片主页轮播组件
+    </h1>
+  
+
+        
+        <a href="/2021/04/04/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%9B%BE%E7%89%87%E4%B8%BB%E9%A1%B5%E8%BD%AE%E6%92%AD%E7%BB%84%E4%BB%B6/" class="archive-article-date">
+  	<time datetime="2021-04-04T02:28:57.042Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>@<a href="%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%9B%BE%E7%89%87%E4%B8%BB%E9%A1%B5%E8%BD%AE%E6%92%AD%E7%BB%84%E4%BB%B6">TOC</a></p>
+<h2 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h2><p>各大网站都比较常用的主页轮播组件<br>可以自己改改就能用</p>
+<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="https://img-blog.csdnimg.cn/20201210134325606.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201210134130432.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p> <img src="https://img-blog.csdnimg.cn/20201210134247549.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><h3 id="html部分"><a href="#html部分" class="headerlink" title="html部分"></a>html部分</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 引入font-awesome css，控制按钮用到了 --&gt;</span></span><br><span class="line">    &lt;link</span><br><span class="line">      rel=&quot;stylesheet&quot;</span><br><span class="line">      href=&quot;https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css&quot;</span><br><span class="line">    /&gt;</span><br><span class="line">    <span class="comment">&lt;!-- 引入页面CSS --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;style.css&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>图片轮播组件<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- 轮播组件 --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;image-slider&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 第一张幻灯片 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;slide current&quot;</span>&gt;</span></span><br><span class="line">          <span class="comment">&lt;!-- 图片 --&gt;</span></span><br><span class="line">          &lt;img</span><br><span class="line">            class=&quot;image&quot;</span><br><span class="line">            src=&quot;https://images.pexels.com/photos/1434580/pexels-photo-1434580.jpeg?cs=srgb&amp;dl=high-rise-buildings-1434580.jpg&amp;fm=jpg&quot;</span><br><span class="line">            alt=&quot;北京&quot;</span><br><span class="line">          /&gt;</span><br><span class="line">          <span class="comment">&lt;!-- 描述 --&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;title&quot;</span>&gt;</span>北京<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;description&quot;</span>&gt;</span></span><br><span class="line">              北京市，简称“京”，是中华人民共和国首都、也是中国4个直辖市之一；北京是国家中心城市、超大城市，全国政治中心、文化中心、国际交往中心、科技创新中心，是世界著名古都和现代化国际城市，也是中国共产党中央委员会、中华人民共和国中央人民政府和全国人民代表大会常务委员会的办公所在地。</span><br><span class="line">            <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 第一张幻灯片 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;slide&quot;</span>&gt;</span></span><br><span class="line">          <span class="comment">&lt;!-- 图片 --&gt;</span></span><br><span class="line">          &lt;img</span><br><span class="line">            class=&quot;image&quot;</span><br><span class="line">            src=&quot;https://images.pexels.com/photos/2614818/pexels-photo-2614818.jpeg?cs=srgb&amp;dl=illuminated-tower-2614818.jpg&amp;fm=jpg&quot;</span><br><span class="line">            alt=&quot;东京&quot;</span><br><span class="line">          /&gt;</span><br><span class="line">          <span class="comment">&lt;!-- 描述 --&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;title&quot;</span>&gt;</span>东京<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;description&quot;</span>&gt;</span></span><br><span class="line">              东京（とうきょう、Tōkyō），日本首都，位于日本关东平原中部，是面向东京湾的国际大都市，日本三大都市圈之一东京都市圈的中心城市。“东京”狭义上指东京都、旧东京府或东京都区部（旧东京市），亦可泛指东京都市圈</span><br><span class="line">              。东京是江户幕府的所在地，江户在庆应4年7月（1868年9月）改名为东京。</span><br><span class="line">            <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 第一张幻灯片 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;slide&quot;</span>&gt;</span></span><br><span class="line">          <span class="comment">&lt;!-- 图片 --&gt;</span></span><br><span class="line">          &lt;img</span><br><span class="line">            class=&quot;image&quot;</span><br><span class="line">            src=&quot;https://images.pexels.com/photos/597909/pexels-photo-597909.jpeg?cs=srgb&amp;dl=buildings-city-city-view-cityscape-597909.jpg&amp;fm=jpg&quot;</span><br><span class="line">            alt=&quot;纽约&quot;</span><br><span class="line">          /&gt;</span><br><span class="line">          <span class="comment">&lt;!-- 描述 --&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;title&quot;</span>&gt;</span>纽约<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;description&quot;</span>&gt;</span></span><br><span class="line">              纽约市（New York</span><br><span class="line">              City，简称NYC），位于美国纽约州东南部大西洋沿岸，是美国第一大城市及第一大港口，纽约都市圈为世界上最大的城市圈之一，与英国伦敦、中国香港并称为“纽伦港”（Nylonkong）。纽约与伦敦并列为全世界最顶级的国际大都市。2018年11月，纽约被GaWC评为Alpha++级世界一线城市。</span><br><span class="line">            <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 控制按钮 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;prev&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fas fa-chevron-left&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;next&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fas fa-chevron-right&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 引入JS --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;index.js&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="js部分"><a href="#js部分" class="headerlink" title="js部分"></a>js部分</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//后退按钮</span></span><br><span class="line"><span class="keyword">const</span> prev = <span class="built_in">document</span>.querySelector(<span class="string">&quot;#prev&quot;</span>);</span><br><span class="line"><span class="comment">//前进按钮</span></span><br><span class="line"><span class="keyword">const</span> next = <span class="built_in">document</span>.querySelector(<span class="string">&quot;#next&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 所有幻灯片</span></span><br><span class="line"><span class="keyword">const</span> slides = <span class="built_in">document</span>.querySelectorAll(<span class="string">&quot;.slide&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当前正在播放的幻灯片</span></span><br><span class="line"><span class="keyword">var</span> currentIndex = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 是否自动播放</span></span><br><span class="line"><span class="keyword">var</span> autoPlay = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 播放方向，前进或后退</span></span><br><span class="line"><span class="keyword">var</span> forward = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 自动播放间隔，5秒</span></span><br><span class="line"><span class="keyword">var</span> interval = <span class="number">5000</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加前进按钮事件处理函数</span></span><br><span class="line">next.addEventListener(<span class="string">&quot;click&quot;</span>, handleNextClicked);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加后退按钮事件处理函数</span></span><br><span class="line">prev.addEventListener(<span class="string">&quot;click&quot;</span>, handlePrevClicked);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 是否自动播放</span></span><br><span class="line"><span class="keyword">if</span> (autoPlay) &#123;</span><br><span class="line">  <span class="built_in">setInterval</span>(forward ? handleNextClicked : handlePrevClicked, interval);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleNextClicked</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">//当前幻灯片</span></span><br><span class="line">  <span class="keyword">let</span> current = slides[currentIndex];</span><br><span class="line">  <span class="comment">// 去掉当前幻灯片的current属性</span></span><br><span class="line">  current.classList.remove(<span class="string">&quot;current&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">//移动到下一张幻灯片，如果没有，则从第一张开始</span></span><br><span class="line">  currentIndex++;</span><br><span class="line">  <span class="keyword">if</span> (currentIndex &gt;= slides.length) &#123;</span><br><span class="line">    currentIndex = <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 给下一张幻灯片加上current class</span></span><br><span class="line">  slides[currentIndex].classList.add(<span class="string">&quot;current&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handlePrevClicked</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">//当前幻灯片</span></span><br><span class="line">  <span class="keyword">let</span> current = slides[currentIndex];</span><br><span class="line">  <span class="comment">// 去掉当前幻灯片的current属性</span></span><br><span class="line">  current.classList.remove(<span class="string">&quot;current&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">//移动到上一张幻灯片，如果没有，则从最后一张开始</span></span><br><span class="line">  currentIndex--;</span><br><span class="line">  <span class="keyword">if</span> (currentIndex &lt; <span class="number">0</span>) &#123;</span><br><span class="line">    currentIndex = slides.length - <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 给下一张幻灯片加上current class</span></span><br><span class="line">  slides[currentIndex].classList.add(<span class="string">&quot;current&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="css部分"><a href="#css部分" class="headerlink" title="css部分"></a>css部分</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&quot;PingFang SC&quot;</span>, <span class="string">&quot;Microsoft Yahei&quot;</span>, sans-serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 设置轮播组件占满整个屏幕 */</span></span><br><span class="line"><span class="selector-class">.image-slider</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100vw</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100vh</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 设置每个幻灯片占满父容器 */</span></span><br><span class="line"><span class="selector-class">.image-slider</span> <span class="selector-class">.slide</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">transition</span>: all linear <span class="number">0.8s</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 设置图片样式 */</span></span><br><span class="line"><span class="selector-class">.image-slider</span> <span class="selector-class">.image</span> &#123;</span><br><span class="line">  <span class="comment">/* 设置图片大小 */</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="comment">/* 图片自适应，保持比例占满屏幕 */</span></span><br><span class="line">  <span class="attribute">object-fit</span>: cover;</span><br><span class="line">  <span class="comment">/* 绝对布局，z-index 50放到文字下方 */</span></span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">50</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 设置文本样式 */</span></span><br><span class="line"><span class="selector-class">.image-slider</span> <span class="selector-class">.slide</span> <span class="selector-class">.content</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="comment">/* 放在图片上方 */</span></span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">100</span>;</span><br><span class="line">  <span class="attribute">color</span>: white;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.6</span>);</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">48px</span>;</span><br><span class="line">  <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 标题距下方24px */</span></span><br><span class="line"><span class="selector-class">.image-slider</span> <span class="selector-class">.slide</span> <span class="selector-class">.content</span> <span class="selector-tag">h1</span> &#123;</span><br><span class="line">  <span class="attribute">margin-bottom</span>: <span class="number">24px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 控制按钮 */</span></span><br><span class="line"><span class="selector-id">#prev</span>,</span><br><span class="line"><span class="selector-id">#next</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">150</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">80px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">80px</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">48px</span>;</span><br><span class="line">  <span class="attribute">color</span>: white;</span><br><span class="line">  <span class="comment">/* 居中 */</span></span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">80px</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/* 圆角 */</span></span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="comment">/* 背景 */</span></span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.6</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">/* 在组件中的位置 */</span></span><br><span class="line">  <span class="attribute">top</span>: <span class="built_in">calc</span>(<span class="number">50%</span> - <span class="number">24px</span>);</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">transition</span>: all <span class="number">0.2s</span>;</span><br><span class="line">  <span class="attribute">cursor</span>: pointer;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 下一张按钮的位置，靠右 */</span></span><br><span class="line"><span class="selector-id">#next</span> &#123;</span><br><span class="line">  <span class="attribute">left</span>: unset;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 鼠标移到按钮上时改变背景和字体颜色 */</span></span><br><span class="line"><span class="selector-id">#prev</span><span class="selector-pseudo">:hover</span>,</span><br><span class="line"><span class="selector-id">#next</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.6</span>);</span><br><span class="line">  <span class="attribute">color</span>: black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 隐藏其他幻灯片 */</span></span><br><span class="line"><span class="selector-class">.image-slider</span> <span class="selector-class">.slide</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 设置当前正在播放的幻灯片的透明度为1 */</span></span><br><span class="line"><span class="selector-class">.image-slider</span> <span class="selector-class">.slide</span><span class="selector-class">.current</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 图片文字描述动画属性,向下移动500px */</span></span><br><span class="line"><span class="selector-class">.image-slider</span> <span class="selector-class">.slide</span> <span class="selector-class">.content</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateY</span>(<span class="number">500px</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 当前正在播放的幻灯片的文字描述位置移动到原位 */</span></span><br><span class="line"><span class="selector-class">.image-slider</span> <span class="selector-class">.slide</span><span class="selector-class">.current</span> <span class="selector-class">.content</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateY</span>(<span class="number">0</span>);</span><br><span class="line">  <span class="attribute">transition</span>: all <span class="number">1s</span> ease-in-out <span class="number">0.4s</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 适配屏幕 */</span></span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">960px</span>) &#123;</span><br><span class="line">  <span class="comment">/* 文字占满屏幕 */</span></span><br><span class="line">  <span class="selector-class">.image-slider</span> <span class="selector-class">.slide</span> <span class="selector-class">.content</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/* 控制按钮大小和间距缩小 */</span></span><br><span class="line">  <span class="selector-id">#prev</span>,</span><br><span class="line">  <span class="selector-id">#next</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">24px</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">24px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">48px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">48px</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">48px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">40%</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/* 移动下一张按钮，使间距变小 */</span></span><br><span class="line">  <span class="selector-id">#next</span> &#123;</span><br><span class="line">    <span class="attribute">left</span>: unset;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">24px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢您的鼓励<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/MyAlipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/04/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9Ados%E5%91%BD%E4%BB%A4/" class="archive-article-date">
-  	<time datetime="2021-04-04T02:26:59.257Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/04/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9Ados%E5%91%BD%E4%BB%A4/">cmd dos命令</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://yoursite.com/2021/04/04/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%9B%BE%E7%89%87%E4%B8%BB%E9%A1%B5%E8%BD%AE%E6%92%AD%E7%BB%84%E4%BB%B6/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E6%9C%80%E4%BD%B3%E8%A3%85%E8%BD%BD%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2021-04-03T14:08:33.429Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-03</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2021/04/04/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E9%AD%94%E6%B3%95%E6%97%8B%E8%BD%AC%E7%B2%92%E5%AD%90%E5%8A%A8%E6%80%81%E6%B8%90%E5%8F%98%E7%89%B9%E6%95%88/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/04/04/%E4%BC%A0%E7%BB%9F%E7%9A%84JDBC%20%E7%BC%96%E7%A8%8B%E7%9A%84%E5%88%86%E6%9E%90%EF%BC%88%E5%85%A5%E9%97%A8%E5%BF%85%E4%BC%9A%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E6%9C%80%E4%BD%B3%E8%A3%85%E8%BD%BD%E9%97%AE%E9%A2%98/">贪心算法-最佳装载问题</a>
-    </h1>
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "https://yoursite.com/2021/04/04/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%9B%BE%E7%89%87%E4%B8%BB%E9%A1%B5%E8%BD%AE%E6%92%AD%E7%BB%84%E4%BB%B6/", 
+    sourceId: "三郎前端特效学习源代码：图片主页轮播组件",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E6%97%85%E8%A1%8C%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2021-04-03T14:08:33.426Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E6%97%85%E8%A1%8C%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98/">贪心算法-旅行规划问题</a>
-    </h1>
+  <div id="SOHUCS" sid="三郎前端特效学习源代码：图片主页轮播组件" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E5%A4%9A%E7%BA%A7%E8%B0%83%E5%BA%A6%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2021-04-03T14:08:33.423Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E5%A4%9A%E7%BA%A7%E8%B0%83%E5%BA%A6%E9%97%AE%E9%A2%98/">贪心算法-多机调度问题</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E8%83%8C%E5%8C%85%E6%90%AC%E8%BF%90%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2021-04-03T14:08:33.418Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E8%83%8C%E5%8C%85%E6%90%AC%E8%BF%90%E9%97%AE%E9%A2%98/">贪心算法-背包搬运问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/03/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%8A%A8%E6%80%81%E6%A8%B1%E8%8A%B1%E8%90%BD%E6%B0%B4%E6%BA%90%E4%BB%A3%E7%A0%81/" class="archive-article-date">
-  	<time datetime="2021-04-03T14:08:33.415Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/03/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%8A%A8%E6%80%81%E6%A8%B1%E8%8A%B1%E8%90%BD%E6%B0%B4%E6%BA%90%E4%BB%A3%E7%A0%81/">三郎前端特效学习笔记：动态樱花落水源代</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/03/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%8A%A8%E6%80%81%E6%94%BE%E5%A4%A7%E5%8D%A1%E9%80%9A%E6%A8%B1%E8%8A%B1/" class="archive-article-date">
-  	<time datetime="2021-04-03T14:08:33.411Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/03/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%8A%A8%E6%80%81%E6%94%BE%E5%A4%A7%E5%8D%A1%E9%80%9A%E6%A8%B1%E8%8A%B1/">三郎前端特效学习笔记：动态放大卡通樱花</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/03/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-04-03T14:08:33.409Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/03/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%A8%EF%BC%89/">测试用例的设计方法（全）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/03/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%9A%E6%A8%A1%E6%8B%9F%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%85%A8%E9%83%A8%E6%BA%90%E4%BB%A3%E7%A0%81/" class="archive-article-date">
-  	<time datetime="2021-04-03T14:08:33.405Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/03/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%9A%E6%A8%A1%E6%8B%9F%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%85%A8%E9%83%A8%E6%BA%90%E4%BB%A3%E7%A0%81/">操作系统原理课程设计：模拟文件管理系统简单介绍和全部源代码</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/03/SpringBoot%E4%B8%8E%E6%95%B4%E5%90%88%E5%85%B6%E4%BB%96%E6%8A%80%E6%9C%AF%20/" class="archive-article-date">
-  	<time datetime="2021-04-03T14:08:33.402Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/03/SpringBoot%E4%B8%8E%E6%95%B4%E5%90%88%E5%85%B6%E4%BB%96%E6%8A%80%E6%9C%AF%20/">SpringBoot与整合其他技术</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2021/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2021/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2021/page/3/">3</a><a class="extend next" rel="next" href="/archives/2021/page/3/">Next &amp;raquo;</a>
-    </nav>
   
 
 
+
+
+
+      <!--添加代码开始-->
+      
+        <div class="declare" hidden="hidden"></div>
+      
           </div>
         </div>
       </div>
@@ -453,8 +370,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
