@@ -151,39 +151,31 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-三郎数据结构算法学习笔记：二叉树的三种遍历及增删改查" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-三郎数据结构学习笔记：双向循环链表（判断是否对称）附源码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86%E5%8F%8A%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/">数据结构算法学习笔记：二叉树的三种遍历及增删改查</a>
+      <a class="article-title" href="/2021/04/05/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%8F%8C%E5%90%91%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8%EF%BC%88%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%AF%B9%E7%A7%B0%EF%BC%89%E9%99%84%E6%BA%90%E7%A0%81/">三郎数据结构学习笔记：双向循环链表（判断是否对称）附源码</a>
     </h1>
   
 
         
-        <a href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86%E5%8F%8A%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/" class="archive-article-date">
-  	<time datetime="2021-04-04T02:30:02.938Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
+        <a href="/2021/04/05/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%8F%8C%E5%90%91%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8%EF%BC%88%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%AF%B9%E7%A7%B0%EF%BC%89%E9%99%84%E6%BA%90%E7%A0%81/" class="archive-article-date">
+  	<time datetime="2021-04-05T15:32:07.099Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!-- toc -->
-
-<ul>
-<li><a href="#%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E7%9A%84%E8%AF%B4%E6%98%8E">二叉树遍历的说明</a></li>
-<li><a href="#%E9%81%8D%E5%8E%86%E5%9B%BE%E7%A4%BA">遍历图示</a></li>
-<li><a href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C">运行结果</a></li>
-<li><a href="#%E6%BA%90%E4%BB%A3%E7%A0%81%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5%E8%87%AA%E5%B7%B1%E5%8E%BB%E6%8E%89%E6%B3%A8%E9%87%8A">源代码（增删改查自己去掉注释）</a></li>
-</ul>
-<!-- tocstop -->
-
-<h2 id="二叉树遍历的说明"><a href="#二叉树遍历的说明" class="headerlink" title="二叉树遍历的说明"></a>二叉树遍历的说明</h2><p>前序遍历:   根左右<br>中序遍历:   左根右<br>后序遍历：左右根</p>
+        <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><strong>建立一个带头结点的双向循环链表，<br>赋值，判断是否对称，写出算法计算时间复杂度</strong></p>
+<h2 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h2><p>travel the Link ；遍历链表<br>put values into a array ；赋值给一个数组<br>compare the array to know whether it belong to symmetry  比较数组是否对称<br><strong>采用问题转化的思想</strong><br>将链表问题转换成数组问题，大大降低了思考难度<br><strong>时间复杂度O（n^2）</strong><br>因为有两个for循环</p>
+<h2 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h2><p><strong>比较次数本来可以更少点，但是我就不改了</strong>，<strong>分个数奇数偶数</strong><br>链表数值：1 2 3 2 1<br><img src="https://img-blog.csdnimg.cn/20201105200601592.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
         
-          <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86%E5%8F%8A%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/#more">more >></a>
+          <a class="article-more-a" href="/2021/04/05/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%8F%8C%E5%90%91%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8%EF%BC%88%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%AF%B9%E7%A7%B0%EF%BC%89%E9%99%84%E6%BA%90%E7%A0%81/#more">more >></a>
         
       
 
@@ -196,7 +188,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86%E5%8F%8A%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/04/05/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%8F%8C%E5%90%91%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8%EF%BC%88%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%AF%B9%E7%A7%B0%EF%BC%89%E9%99%84%E6%BA%90%E7%A0%81/">展开全文 >></a>
         </p>
       
 
@@ -255,20 +247,685 @@ gitalk.render('gitalk-container')
 </script>
   
   
-    <article id="post-三郎前端特效学习源代码：动态键入动画 H5+css+js" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-前端特效源代码：波浪动态导航栏-条 H5+css" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/04/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%8A%A8%E6%80%81%E9%94%AE%E5%85%A5%E5%8A%A8%E7%94%BB%20H5+css+js/">三郎前端特效学习源代码：动态键入动画</a>
+      <a class="article-title" href="/2021/04/05/%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%B3%A2%E6%B5%AA%E5%8A%A8%E6%80%81%E5%AF%BC%E8%88%AA%E6%A0%8F-%E6%9D%A1%20H5+css/">前端特效源代码：波浪动态导航栏/条 H5+css</a>
     </h1>
   
 
         
-        <a href="/2021/04/04/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%8A%A8%E6%80%81%E9%94%AE%E5%85%A5%E5%8A%A8%E7%94%BB%20H5+css+js/" class="archive-article-date">
-  	<time datetime="2021-04-04T02:29:26.226Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
+        <a href="/2021/04/05/%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%B3%A2%E6%B5%AA%E5%8A%A8%E6%80%81%E5%AF%BC%E8%88%AA%E6%A0%8F-%E6%9D%A1%20H5+css/" class="archive-article-date">
+  	<time datetime="2021-04-05T15:30:17.569Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>@[TOC](波浪动态导航栏 H5+css)</p>
+<p>这个波浪效果程度可以自己调<br>背景色和波浪都可以自己试试换一换<br><strong>记得h5和css在同一文件目录下</strong><br>个人感觉比较简单，逻辑很好实现，只用了css来控制样式</p>
+<h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><p><img src="https://img-blog.csdnimg.cn/20201122111211399.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+        
+          <a class="article-more-a" href="/2021/04/05/%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%B3%A2%E6%B5%AA%E5%8A%A8%E6%80%81%E5%AF%BC%E8%88%AA%E6%A0%8F-%E6%9D%A1%20H5+css/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/05/%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%B3%A2%E6%B5%AA%E5%8A%A8%E6%80%81%E5%AF%BC%E8%88%AA%E6%A0%8F-%E6%9D%A1%20H5+css/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+      <!--添加代码开始-->
+      
+        <div class="declare" hidden="hidden"></div>
+      
+
+
+       <div id="gitalk-container"></div>
+       <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: '',
+  clientSecret: '',
+  repo: 'https://github.com/SanLangLOVE/BlogGitalk.git',
+  owner: 'SanLangLOVE',
+  admin: ['SanLangLOVE'],
+  id: md5(window.location.pathname),
+  distractionFreeMode: true
+})
+
+gitalk.render('gitalk-container')
+</script>
+  
+  
+    <article id="post-前端特效源代码：实现柱状图入门必会  h5+canvs" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/05/%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%AE%9E%E7%8E%B0%E6%9F%B1%E7%8A%B6%E5%9B%BE%E5%85%A5%E9%97%A8%E5%BF%85%E4%BC%9A%20%20h5+canvs/">前端特效源代码：实现柱状图 h5+canvs</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/05/%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%AE%9E%E7%8E%B0%E6%9F%B1%E7%8A%B6%E5%9B%BE%E5%85%A5%E9%97%A8%E5%BF%85%E4%BC%9A%20%20h5+canvs/" class="archive-article-date">
+  	<time datetime="2021-04-05T15:29:16.844Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>本代码是前端特效的入门必学案例！</strong></p>
+<h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><p><img src="https://img-blog.csdnimg.cn/20201122112221826.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+        
+          <a class="article-more-a" href="/2021/04/05/%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%AE%9E%E7%8E%B0%E6%9F%B1%E7%8A%B6%E5%9B%BE%E5%85%A5%E9%97%A8%E5%BF%85%E4%BC%9A%20%20h5+canvs/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/05/%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%AE%9E%E7%8E%B0%E6%9F%B1%E7%8A%B6%E5%9B%BE%E5%85%A5%E9%97%A8%E5%BF%85%E4%BC%9A%20%20h5+canvs/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+      <!--添加代码开始-->
+      
+        <div class="declare" hidden="hidden"></div>
+      
+
+
+       <div id="gitalk-container"></div>
+       <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: '',
+  clientSecret: '',
+  repo: 'https://github.com/SanLangLOVE/BlogGitalk.git',
+  owner: 'SanLangLOVE',
+  admin: ['SanLangLOVE'],
+  id: md5(window.location.pathname),
+  distractionFreeMode: true
+})
+
+gitalk.render('gitalk-container')
+</script>
+  
+  
+    <article id="post-三郎数据结构算法学习笔记：冒泡排序及其简单优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/05/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E5%8F%8A%E5%85%B6%E7%AE%80%E5%8D%95%E4%BC%98%E5%8C%96/">三郎数据结构算法学习笔记：冒泡排序及其简单优化</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/05/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E5%8F%8A%E5%85%B6%E7%AE%80%E5%8D%95%E4%BC%98%E5%8C%96/" class="archive-article-date">
+  	<time datetime="2021-04-05T15:28:16.942Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h2><p> 冒泡排序（<strong>Bubble Sorting</strong>）的基本思想是：通过对待排序序列从前向后（从下标较小的元素开始）,依次比较相邻元素的值，若发现逆序则交换，使值较大的元素逐渐从前移向后部，就象水底下的气泡一样逐渐向上冒。</p>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p> 因为排序的过程中，各元素不断接近自己的位置，<strong>如果一趟比较下来没有进行过交换，就说明序列有序</strong>，因此要在 排序过程中设置一个<strong>标志 flag 判断元素是否进行过交换</strong>。从而减少不必要的比较。<br> (这里说的优化，可以在冒泡排序写好后进行)</p>
+<h2 id="图示"><a href="#图示" class="headerlink" title="图示"></a>图示</h2><p> <img src="https://img-blog.csdnimg.cn/20201124125140484.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+        
+          <a class="article-more-a" href="/2021/04/05/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E5%8F%8A%E5%85%B6%E7%AE%80%E5%8D%95%E4%BC%98%E5%8C%96/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/05/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E5%8F%8A%E5%85%B6%E7%AE%80%E5%8D%95%E4%BC%98%E5%8C%96/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+      <!--添加代码开始-->
+      
+        <div class="declare" hidden="hidden"></div>
+      
+
+
+       <div id="gitalk-container"></div>
+       <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: '',
+  clientSecret: '',
+  repo: 'https://github.com/SanLangLOVE/BlogGitalk.git',
+  owner: 'SanLangLOVE',
+  admin: ['SanLangLOVE'],
+  id: md5(window.location.pathname),
+  distractionFreeMode: true
+})
+
+gitalk.render('gitalk-container')
+</script>
+  
+  
+    <article id="post-三郎数据结构算法学习笔记：各种排序算法时间复杂度比较" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/05/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%90%84%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E6%AF%94%E8%BE%83/">各种排序算法时间复杂度比较</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/05/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%90%84%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E6%AF%94%E8%BE%83/" class="archive-article-date">
+  	<time datetime="2021-04-05T15:26:45.696Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2><span id="各种排序算法时间复杂度比较">各种排序算法时间复杂度比较</span></h2><p>如下图：</p>
+<p><img src="https://img-blog.csdnimg.cn/20201124194045210.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p><strong>相关术语解释：</strong><br>稳定：如果 a 原本在 b 前面，而 a=b，排序之后 a 仍然在 b 的前面；<br>不稳定：如果 a 原本在 b 的前面，而 a=b，排序之后 a 可能会出现在 b 的后面；<br>内排序：所有排序操作都在内存中完成；<br>外排序：由于数据太大，因此把数据放在磁盘中，而排序通过磁盘和内存的数据传输才能进行；<br>时间复杂度： 一个算法执行所耗费的时间。<br>空间复杂度：运行完一个程序所需内存的大小。<br>n: 数据规模<br>k: “桶”的个数<br>In-place:不占用额外内存<br>Out-place: 占用额外内存</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/05/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%90%84%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E6%AF%94%E8%BE%83/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+      <!--添加代码开始-->
+      
+        <div class="declare" hidden="hidden"></div>
+      
+
+
+       <div id="gitalk-container"></div>
+       <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: '',
+  clientSecret: '',
+  repo: 'https://github.com/SanLangLOVE/BlogGitalk.git',
+  owner: 'SanLangLOVE',
+  admin: ['SanLangLOVE'],
+  id: md5(window.location.pathname),
+  distractionFreeMode: true
+})
+
+gitalk.render('gitalk-container')
+</script>
+  
+  
+    <article id="post-三郎数据结构算法学习笔记：线索二叉树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/05/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E7%BA%BF%E7%B4%A2%E4%BA%8C%E5%8F%89%E6%A0%91/">三郎数据结构算法学习笔记：线索二叉树</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/05/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E7%BA%BF%E7%B4%A2%E4%BA%8C%E5%8F%89%E6%A0%91/" class="archive-article-date">
+  	<time datetime="2021-04-05T15:24:10.809Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&lt;–toc–&gt;</p>
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>n 个结点的二叉链表中含有 n+1 【公式 2n-(n-1)=n+1】 个空指针域。<br>利用二叉链表中的空指针域，<br>存放指向该结点在某种遍历次序下的前驱和后继结点的指针<br>（这种附加的指针称为”线索”）<br>这种加上了线索的二叉链表称为线索链表，相应的二叉树称为线索二叉树(Threaded BinaryTree)。<br>根据线索性质的不同，线索二叉树可分为<br>前序线索二叉树、中序线索二叉树和后序线索二叉树三种<br>一个结点的前一个结点，称为前驱结点<br>一个结点的后一个结点，称为后继结点</p>
+        
+          <a class="article-more-a" href="/2021/04/05/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E7%BA%BF%E7%B4%A2%E4%BA%8C%E5%8F%89%E6%A0%91/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/05/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E7%BA%BF%E7%B4%A2%E4%BA%8C%E5%8F%89%E6%A0%91/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+      <!--添加代码开始-->
+      
+        <div class="declare" hidden="hidden"></div>
+      
+
+
+       <div id="gitalk-container"></div>
+       <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: '',
+  clientSecret: '',
+  repo: 'https://github.com/SanLangLOVE/BlogGitalk.git',
+  owner: 'SanLangLOVE',
+  admin: ['SanLangLOVE'],
+  id: md5(window.location.pathname),
+  distractionFreeMode: true
+})
+
+gitalk.render('gitalk-container')
+</script>
+  
+  
+    <article id="post-MyBatis的优点和缺点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/05/MyBatis%E7%9A%84%E4%BC%98%E7%82%B9%E5%92%8C%E7%BC%BA%E7%82%B9/">MyBatis的优点和缺点</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/05/MyBatis%E7%9A%84%E4%BC%98%E7%82%B9%E5%92%8C%E7%BC%BA%E7%82%B9/" class="archive-article-date">
+  	<time datetime="2021-04-05T15:22:09.284Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="MyBatis的优点和缺点"><a href="#MyBatis的优点和缺点" class="headerlink" title="MyBatis的优点和缺点"></a>MyBatis的优点和缺点</h2><h3 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h3><p>（1）基于SQL语句编程，相当灵活，不会对应用程序或者数据库的现有设计造成任何影响，<strong>SQL写在XML里，解除sql与程序代码的耦合，便于统一管理；提供XML标签，支持编写动态SQL语句，并可重用。</strong></p>
+        
+          <a class="article-more-a" href="/2021/04/05/MyBatis%E7%9A%84%E4%BC%98%E7%82%B9%E5%92%8C%E7%BC%BA%E7%82%B9/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/05/MyBatis%E7%9A%84%E4%BC%98%E7%82%B9%E5%92%8C%E7%BC%BA%E7%82%B9/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+      <!--添加代码开始-->
+      
+        <div class="declare" hidden="hidden"></div>
+      
+
+
+       <div id="gitalk-container"></div>
+       <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: '',
+  clientSecret: '',
+  repo: 'https://github.com/SanLangLOVE/BlogGitalk.git',
+  owner: 'SanLangLOVE',
+  admin: ['SanLangLOVE'],
+  id: md5(window.location.pathname),
+  distractionFreeMode: true
+})
+
+gitalk.render('gitalk-container')
+</script>
+  
+  
+    <article id="post-三郎Java框架学习：SpringBoot的起步依赖及其作用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/05/%E4%B8%89%E9%83%8EJava%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0%EF%BC%9ASpringBoot%E7%9A%84%E8%B5%B7%E6%AD%A5%E4%BE%9D%E8%B5%96%E5%8F%8A%E5%85%B6%E4%BD%9C%E7%94%A8/">SpringBoot的起步依赖及其作用</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/05/%E4%B8%89%E9%83%8EJava%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0%EF%BC%9ASpringBoot%E7%9A%84%E8%B5%B7%E6%AD%A5%E4%BE%9D%E8%B5%96%E5%8F%8A%E5%85%B6%E4%BD%9C%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2021-04-05T15:20:16.348Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="SpringBoot的起步依赖及其作用"><a href="#SpringBoot的起步依赖及其作用" class="headerlink" title="SpringBoot的起步依赖及其作用"></a>SpringBoot的起步依赖及其作用</h2><p>SpringBoot要求，项目要继承SpringBoot的起步依赖spring-boot-starter-parent</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.1.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2021/04/05/%E4%B8%89%E9%83%8EJava%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0%EF%BC%9ASpringBoot%E7%9A%84%E8%B5%B7%E6%AD%A5%E4%BE%9D%E8%B5%96%E5%8F%8A%E5%85%B6%E4%BD%9C%E7%94%A8/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/05/%E4%B8%89%E9%83%8EJava%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0%EF%BC%9ASpringBoot%E7%9A%84%E8%B5%B7%E6%AD%A5%E4%BE%9D%E8%B5%96%E5%8F%8A%E5%85%B6%E4%BD%9C%E7%94%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+      <!--添加代码开始-->
+      
+        <div class="declare" hidden="hidden"></div>
+      
+
+
+       <div id="gitalk-container"></div>
+       <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: '',
+  clientSecret: '',
+  repo: 'https://github.com/SanLangLOVE/BlogGitalk.git',
+  owner: 'SanLangLOVE',
+  admin: ['SanLangLOVE'],
+  id: md5(window.location.pathname),
+  distractionFreeMode: true
+})
+
+gitalk.render('gitalk-container')
+</script>
+  
+  
+    <article id="post-三郎数据结构算法学习笔记：希尔排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/">三郎数据结构算法学习笔记：希尔排序</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/" class="archive-article-date">
+  	<time datetime="2021-04-04T05:40:14.659Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
 </a>
         
       </header>
@@ -278,129 +935,125 @@ gitalk.render('gitalk-container')
         <!-- toc -->
 
 <ul>
-<li><a href="#%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D">简单介绍</a></li>
-<li><a href="#%E6%95%88%E6%9E%9C%E5%9B%BE">效果图</a></li>
-<li><a href="#%E5%AE%8C%E6%95%B4%E6%BA%90%E4%BB%A3%E7%A0%81">完整源代码</a><ul>
-<li><a href="#h5%E9%83%A8%E5%88%86">H5部分</a></li>
-<li><a href="#css%E9%83%A8%E5%88%86">css部分</a></li>
-<li><a href="#js%E9%83%A8%E5%88%86">js部分</a></li>
+<li><a href="#%E6%8E%92%E5%BA%8F%E4%BB%8B%E7%BB%8D">排序介绍</a></li>
+<li><a href="#%E5%9B%BE%E7%A4%BA">图示</a></li>
+<li><a href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C">运行结果</a></li>
+<li><a href="#%E6%BA%90%E4%BB%A3%E7%A0%81">源代码</a></li>
+</ul>
+<!-- tocstop -->
+
+<h2 id="排序介绍"><a href="#排序介绍" class="headerlink" title="排序介绍"></a>排序介绍</h2><p>希尔排序是希尔（Donald Shell）于 1959 年提出的一种排序算法。希尔排序也是一种<strong>插入排序</strong>，它是简单插入排序经过改进之后的一个更高效的版本，也称为<strong>缩小增量排序</strong></p>
+<h2 id="图示"><a href="#图示" class="headerlink" title="图示"></a>图示</h2><p><img src="https://img-blog.csdnimg.cn/20201124131904846.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+        
+          <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+      <!--添加代码开始-->
+      
+        <div class="declare" hidden="hidden"></div>
+      
+
+
+       <div id="gitalk-container"></div>
+       <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: '',
+  clientSecret: '',
+  repo: 'https://github.com/SanLangLOVE/BlogGitalk.git',
+  owner: 'SanLangLOVE',
+  admin: ['SanLangLOVE'],
+  id: md5(window.location.pathname),
+  distractionFreeMode: true
+})
+
+gitalk.render('gitalk-container')
+</script>
+  
+  
+    <article id="post-三郎数据结构算法学习笔记：快速排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">三郎数据结构算法学习笔记：快速排序</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" class="archive-article-date">
+  	<time datetime="2021-04-04T05:37:16.217Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- toc -->
+
+<ul>
+<li><a href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E6%B3%95%E4%BB%8B%E7%BB%8D">快速排序法介绍</a><ul>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3">基本思想：</a></li>
 </ul>
 </li>
+<li><a href="#%E5%9B%BE%E8%A7%A3">图解</a></li>
+<li><a href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C">运行结果</a></li>
+<li><a href="#%E6%BA%90%E4%BB%A3%E7%A0%81">源代码</a></li>
 </ul>
 <!-- tocstop -->
 
-<h2 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h2><p>我们经常可以看见一些电影动画有，键盘输入的动画，<br>用H5+css+js也能快速实现<br>很简单也很酷<br>源代码来源GitHub</p>
+<h2 id="快速排序法介绍"><a href="#快速排序法介绍" class="headerlink" title="快速排序法介绍"></a>快速排序法介绍</h2><p>快速排序（Quicksort）是对冒泡排序的一种改进。</p>
+<h3 id="基本思想："><a href="#基本思想：" class="headerlink" title="基本思想："></a>基本思想：</h3><p>通过一趟排序将要排序的数据分割成独立的两部分，<br>其中一部分的所有数据都比另外一部分的所有数据都要小，<br>然后再按此方法对这两部分数据分别进行快速排序，<br>整个排序过程可以递归进行，以此达到整个数据变成有序序列</p>
         
-          <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%8A%A8%E6%80%81%E9%94%AE%E5%85%A5%E5%8A%A8%E7%94%BB%20H5+css+js/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%8A%A8%E6%80%81%E9%94%AE%E5%85%A5%E5%8A%A8%E7%94%BB%20H5+css+js/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-      <!--添加代码开始-->
-      
-        <div class="declare" hidden="hidden"></div>
-      
-
-
-       <div id="gitalk-container"></div>
-       <div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
-
-<script>
-var gitalk = new Gitalk({
-  clientID: '',
-  clientSecret: '',
-  repo: 'https://github.com/SanLangLOVE/BlogGitalk.git',
-  owner: 'SanLangLOVE',
-  admin: ['SanLangLOVE'],
-  id: md5(window.location.pathname),
-  distractionFreeMode: true
-})
-
-gitalk.render('gitalk-container')
-</script>
-  
-  
-    <article id="post-传统的JDBC 编程的分析（入门必会）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/04/%E4%BC%A0%E7%BB%9F%E7%9A%84JDBC%20%E7%BC%96%E7%A8%8B%E7%9A%84%E5%88%86%E6%9E%90%EF%BC%88%E5%85%A5%E9%97%A8%E5%BF%85%E4%BC%9A%EF%BC%89/">JDBC 编程的分析</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/04/%E4%BC%A0%E7%BB%9F%E7%9A%84JDBC%20%E7%BC%96%E7%A8%8B%E7%9A%84%E5%88%86%E6%9E%90%EF%BC%88%E5%85%A5%E9%97%A8%E5%BF%85%E4%BC%9A%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-04-04T02:27:55.209Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!-- toc -->
-
-<ul>
-<li><a href="#%E4%BC%A0%E7%BB%9F%E7%9A%84jdbc-%E7%BC%96%E7%A8%8B%E7%9A%84%E5%88%86%E6%9E%90">传统的JDBC 编程的分析</a></li>
-</ul>
-<!-- tocstop -->
-
-<h2 id="传统的JDBC-编程的分析"><a href="#传统的JDBC-编程的分析" class="headerlink" title="传统的JDBC 编程的分析"></a>传统的JDBC 编程的分析</h2><p><strong>步骤：</strong></p>
-<p>//加载数据库驱动</p>
-<p>//通过驱动管理类获取数据库链接</p>
-<p>//定义 sql 语句 ?表示占位符</p>
-<p>//获取预处理 statement</p>
-<p>//设置参数，第一个参数为 sql 语句中参数的序号（从 1 开始），第二个参数为设置的参数值</p>
-<p>//向数据库发出 sql 执行查询，查询出结果集</p>
-<p>//遍历查询结果集</p>
-<p>//释放资源</p>
-        
-          <a class="article-more-a" href="/2021/04/04/%E4%BC%A0%E7%BB%9F%E7%9A%84JDBC%20%E7%BC%96%E7%A8%8B%E7%9A%84%E5%88%86%E6%9E%90%EF%BC%88%E5%85%A5%E9%97%A8%E5%BF%85%E4%BC%9A%EF%BC%89/#more">more >></a>
+          <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/#more">more >></a>
         
       
 
@@ -413,692 +1066,7 @@ gitalk.render('gitalk-container')
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/04/%E4%BC%A0%E7%BB%9F%E7%9A%84JDBC%20%E7%BC%96%E7%A8%8B%E7%9A%84%E5%88%86%E6%9E%90%EF%BC%88%E5%85%A5%E9%97%A8%E5%BF%85%E4%BC%9A%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-      <!--添加代码开始-->
-      
-        <div class="declare" hidden="hidden"></div>
-      
-
-
-       <div id="gitalk-container"></div>
-       <div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
-
-<script>
-var gitalk = new Gitalk({
-  clientID: '',
-  clientSecret: '',
-  repo: 'https://github.com/SanLangLOVE/BlogGitalk.git',
-  owner: 'SanLangLOVE',
-  admin: ['SanLangLOVE'],
-  id: md5(window.location.pathname),
-  distractionFreeMode: true
-})
-
-gitalk.render('gitalk-container')
-</script>
-  
-  
-    <article id="post-详细搭建 Mybatis 开发环境和入门工程（必会）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/04/%E8%AF%A6%E7%BB%86%E6%90%AD%E5%BB%BA%20Mybatis%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%92%8C%E5%85%A5%E9%97%A8%E5%B7%A5%E7%A8%8B%EF%BC%88%E5%BF%85%E4%BC%9A%EF%BC%89/">详细搭建 Mybatis 开发环境和入门工程（必会）</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/04/%E8%AF%A6%E7%BB%86%E6%90%AD%E5%BB%BA%20Mybatis%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%92%8C%E5%85%A5%E9%97%A8%E5%B7%A5%E7%A8%8B%EF%BC%88%E5%BF%85%E4%BC%9A%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-04-04T02:27:40.209Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!-- toc -->
-
-<ul>
-<li><a href="#%E5%88%9B%E5%BB%BA-maven-%E5%B7%A5%E7%A8%8B">创建 maven 工程</a></li>
-<li><a href="#%E6%B7%BB%E5%8A%A0-mybatis345-%E7%9A%84%E5%9D%90%E6%A0%87">添加 Mybatis3.4.5 的坐标</a></li>
-<li><a href="#%E7%BC%96%E5%86%99-user-%E5%AE%9E%E4%BD%93%E7%B1%BB">编写 User 实体类</a></li>
-<li><a href="#%E7%BC%96%E5%86%99%E6%8C%81%E4%B9%85%E5%B1%82%E6%8E%A5%E5%8F%A3-iuserdao">编写持久层接口 IUserDao</a></li>
-<li><a href="#%E7%BC%96%E5%86%99%E6%8C%81%E4%B9%85%E5%B1%82%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6-iuserdaoxml">编写持久层接口的映射文件 IUserDao.xml</a></li>
-<li><a href="#%E7%BC%96%E5%86%99-sqlmapconfigxml-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">编写 SqlMapConfig.xml 配置文件</a></li>
-<li><a href="#%E7%BC%96%E5%86%99%E6%B5%8B%E8%AF%95%E7%B1%BB">编写测试类</a></li>
-<li><a href="#%E5%B0%8F%E7%BB%93">小结</a></li>
-</ul>
-<!-- tocstop -->
-
-<h3 id="创建-maven-工程"><a href="#创建-maven-工程" class="headerlink" title="创建 maven 工程"></a>创建 maven 工程</h3><p>创建 mybatis01 的工程，工程信息如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Groupid:com.sanlang</span><br><span class="line">ArtifactId:mybatis01</span><br><span class="line">Packing:jar</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2021/04/04/%E8%AF%A6%E7%BB%86%E6%90%AD%E5%BB%BA%20Mybatis%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%92%8C%E5%85%A5%E9%97%A8%E5%B7%A5%E7%A8%8B%EF%BC%88%E5%BF%85%E4%BC%9A%EF%BC%89/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/04/%E8%AF%A6%E7%BB%86%E6%90%AD%E5%BB%BA%20Mybatis%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%92%8C%E5%85%A5%E9%97%A8%E5%B7%A5%E7%A8%8B%EF%BC%88%E5%BF%85%E4%BC%9A%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-      <!--添加代码开始-->
-      
-        <div class="declare" hidden="hidden"></div>
-      
-
-
-       <div id="gitalk-container"></div>
-       <div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
-
-<script>
-var gitalk = new Gitalk({
-  clientID: '',
-  clientSecret: '',
-  repo: 'https://github.com/SanLangLOVE/BlogGitalk.git',
-  owner: 'SanLangLOVE',
-  admin: ['SanLangLOVE'],
-  id: md5(window.location.pathname),
-  distractionFreeMode: true
-})
-
-gitalk.render('gitalk-container')
-</script>
-  
-  
-    <article id="post-软件测试学习笔记：dos命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/04/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9Ados%E5%91%BD%E4%BB%A4/">cmd dos命令</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/04/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9Ados%E5%91%BD%E4%BB%A4/" class="archive-article-date">
-  	<time datetime="2021-04-04T02:26:59.257Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="dos命令"><a href="#dos命令" class="headerlink" title="dos命令"></a>dos命令</h2><p>书写代码来实现控制系统的目的<br>1、win+r 打开运行窗口</p>
-<p>2、cmd   回车或者点击确定，会打开一个黑窗口，从中书写代码即可控制系统</p>
-<p>3、Ipconfig/all  回车<br>查看当前电脑的网络连接情况；<br>以太网连接  以太网或本地连接  找到它，在下面的值中找到物理地址（也叫它mac地址），<br>后面的一串数字就是本机是识别码（唯一的）</p>
-        
-          <a class="article-more-a" href="/2021/04/04/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9Ados%E5%91%BD%E4%BB%A4/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/04/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9Ados%E5%91%BD%E4%BB%A4/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-      <!--添加代码开始-->
-      
-        <div class="declare" hidden="hidden"></div>
-      
-
-
-       <div id="gitalk-container"></div>
-       <div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
-
-<script>
-var gitalk = new Gitalk({
-  clientID: '',
-  clientSecret: '',
-  repo: 'https://github.com/SanLangLOVE/BlogGitalk.git',
-  owner: 'SanLangLOVE',
-  admin: ['SanLangLOVE'],
-  id: md5(window.location.pathname),
-  distractionFreeMode: true
-})
-
-gitalk.render('gitalk-container')
-</script>
-  
-  
-    <article id="post-贪心算法-最佳装载问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E6%9C%80%E4%BD%B3%E8%A3%85%E8%BD%BD%E9%97%AE%E9%A2%98/">贪心算法-最佳装载问题</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E6%9C%80%E4%BD%B3%E8%A3%85%E8%BD%BD%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2021-04-03T14:08:33.429Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>题目：有一批集装箱要装上一艘载重量为c的轮船。其中集装箱i的重量为Wi。<br>最优装载问题要求确定在装载体积不受限制的情况下，将尽可能多的集装箱装上轮船。</p>
-        
-          <a class="article-more-a" href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E6%9C%80%E4%BD%B3%E8%A3%85%E8%BD%BD%E9%97%AE%E9%A2%98/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E6%9C%80%E4%BD%B3%E8%A3%85%E8%BD%BD%E9%97%AE%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-      <!--添加代码开始-->
-      
-        <div class="declare" hidden="hidden"></div>
-      
-
-
-       <div id="gitalk-container"></div>
-       <div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
-
-<script>
-var gitalk = new Gitalk({
-  clientID: '',
-  clientSecret: '',
-  repo: 'https://github.com/SanLangLOVE/BlogGitalk.git',
-  owner: 'SanLangLOVE',
-  admin: ['SanLangLOVE'],
-  id: md5(window.location.pathname),
-  distractionFreeMode: true
-})
-
-gitalk.render('gitalk-container')
-</script>
-  
-  
-    <article id="post-贪心算法-旅行规划问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E6%97%85%E8%A1%8C%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98/">贪心算法-旅行规划问题</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E6%97%85%E8%A1%8C%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2021-04-03T14:08:33.426Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>题目：贪心算法-旅行规划问题<br>G先生想独自驾驶汽车从城市A到城市B。城市A到城市B的距离为d公里。<br>汽车油箱的容量为C公升，每公升汽油能行驶E公里。出发点每公升汽油的价格为P元。<br>从城市A到城市B沿途有n 个加油站。第i个加油站距出发点的距离为di，<br>油价为每公升 pi元。如何规划才能使旅行的费用最省？</p>
-        
-          <a class="article-more-a" href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E6%97%85%E8%A1%8C%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E6%97%85%E8%A1%8C%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-      <!--添加代码开始-->
-      
-        <div class="declare" hidden="hidden"></div>
-      
-
-
-       <div id="gitalk-container"></div>
-       <div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
-
-<script>
-var gitalk = new Gitalk({
-  clientID: '',
-  clientSecret: '',
-  repo: 'https://github.com/SanLangLOVE/BlogGitalk.git',
-  owner: 'SanLangLOVE',
-  admin: ['SanLangLOVE'],
-  id: md5(window.location.pathname),
-  distractionFreeMode: true
-})
-
-gitalk.render('gitalk-container')
-</script>
-  
-  
-    <article id="post-贪心算法-多级调度问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E5%A4%9A%E7%BA%A7%E8%B0%83%E5%BA%A6%E9%97%AE%E9%A2%98/">贪心算法-多机调度问题</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E5%A4%9A%E7%BA%A7%E8%B0%83%E5%BA%A6%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2021-04-03T14:08:33.423Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>题目：设有n个独立的作业{1，2，…,n},由m台相同的机器进行加工处理。<br>作业i所需的处理时间为t（i）。<br>现约定，任何作业可以在任何一台机器上加工处理，<br>但未完工前不允许中断处理。任何作业不能拆分成更小的子作业。<br>多机调度问题要求给出一种作业调度方案，<br>使所给的n个作业在尽可能短的时间内由m台机器加工处理完成。</p>
-        
-          <a class="article-more-a" href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E5%A4%9A%E7%BA%A7%E8%B0%83%E5%BA%A6%E9%97%AE%E9%A2%98/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E5%A4%9A%E7%BA%A7%E8%B0%83%E5%BA%A6%E9%97%AE%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-      <!--添加代码开始-->
-      
-        <div class="declare" hidden="hidden"></div>
-      
-
-
-       <div id="gitalk-container"></div>
-       <div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
-
-<script>
-var gitalk = new Gitalk({
-  clientID: '',
-  clientSecret: '',
-  repo: 'https://github.com/SanLangLOVE/BlogGitalk.git',
-  owner: 'SanLangLOVE',
-  admin: ['SanLangLOVE'],
-  id: md5(window.location.pathname),
-  distractionFreeMode: true
-})
-
-gitalk.render('gitalk-container')
-</script>
-  
-  
-    <article id="post-贪心算法-背包搬运问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E8%83%8C%E5%8C%85%E6%90%AC%E8%BF%90%E9%97%AE%E9%A2%98/">贪心算法-背包搬运问题</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E8%83%8C%E5%8C%85%E6%90%AC%E8%BF%90%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2021-04-03T14:08:33.418Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>题目：给定n种物品和一个背包。物品i的重量是Wi，其价值为Vi，背包的容量为C。<br>应如何选择装入背包的物品，可以选择物品i的一部分,使得装入背包中物品的总价值最大?</p>
-        
-          <a class="article-more-a" href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E8%83%8C%E5%8C%85%E6%90%AC%E8%BF%90%E9%97%AE%E9%A2%98/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95-%E8%83%8C%E5%8C%85%E6%90%AC%E8%BF%90%E9%97%AE%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-      <!--添加代码开始-->
-      
-        <div class="declare" hidden="hidden"></div>
-      
-
-
-       <div id="gitalk-container"></div>
-       <div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
-
-<script>
-var gitalk = new Gitalk({
-  clientID: '',
-  clientSecret: '',
-  repo: 'https://github.com/SanLangLOVE/BlogGitalk.git',
-  owner: 'SanLangLOVE',
-  admin: ['SanLangLOVE'],
-  id: md5(window.location.pathname),
-  distractionFreeMode: true
-})
-
-gitalk.render('gitalk-container')
-</script>
-  
-  
-    <article id="post-三郎前端特效学习笔记：动态樱花落水源代码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/03/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%8A%A8%E6%80%81%E6%A8%B1%E8%8A%B1%E8%90%BD%E6%B0%B4%E6%BA%90%E4%BB%A3%E7%A0%81/">三郎前端特效学习笔记：动态樱花落水源代</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/03/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%8A%A8%E6%80%81%E6%A8%B1%E8%8A%B1%E8%90%BD%E6%B0%B4%E6%BA%90%E4%BB%A3%E7%A0%81/" class="archive-article-date">
-  	<time datetime="2021-04-03T14:08:33.415Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!-- toc -->
-
-<ul>
-<li><a href="#%E5%85%B6%E4%BB%96%E7%9A%84%E8%AF%9D">其他的话</a></li>
-<li><a href="#%E6%95%88%E6%9E%9C%E5%9B%BE">效果图</a></li>
-<li><a href="#%E5%AE%8C%E6%95%B4%E6%BA%90%E4%BB%A3%E7%A0%81">完整源代码</a></li>
-</ul>
-<!-- tocstop -->
-
-<h2 id="其他的话"><a href="#其他的话" class="headerlink" title="其他的话"></a>其他的话</h2><p>就这前端特效还有人网上拿去卖钱<br>难怪中国计算机学习环境不行<br>唉</p>
-<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="https://img-blog.csdnimg.cn/20210126184332819.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNjg0OTcy,size_16,color_FFFFFF,t_70" alt="纯"></p>
-        
-          <a class="article-more-a" href="/2021/04/03/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%8A%A8%E6%80%81%E6%A8%B1%E8%8A%B1%E8%90%BD%E6%B0%B4%E6%BA%90%E4%BB%A3%E7%A0%81/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/03/%E4%B8%89%E9%83%8E%E5%89%8D%E7%AB%AF%E7%89%B9%E6%95%88%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%8A%A8%E6%80%81%E6%A8%B1%E8%8A%B1%E8%90%BD%E6%B0%B4%E6%BA%90%E4%BB%A3%E7%A0%81/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/04/04/%E4%B8%89%E9%83%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">展开全文 >></a>
         </p>
       
 
@@ -1159,7 +1127,7 @@ gitalk.render('gitalk-container')
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
     </nav>
   
 
